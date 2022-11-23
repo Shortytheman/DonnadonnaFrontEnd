@@ -1,0 +1,13 @@
+.textarea{
+    resize: none;
+    font: 60px;
+}
+
+::placeholder{
+    font-size: 20px;
+}
+
+.fortsæt{
+    font-family: 'Satoshi', sans-serif !important;
+    width: 8% !important;
+}
