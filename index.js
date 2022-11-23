@@ -8,6 +8,7 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstra
 
 window.addEventListener("load", async () => {
 
+    const templateSurveyBar = await loadHtml("./pages/Survey/surveyBar/surveyBar.html")
     const templateSurveyNavn = await loadHtml("./pages/Survey/surveyNavn/surveyNavn.html")
     const templateSurveyAlder = await loadHtml("./pages/Survey/surveyAlder/surveyAlder.html")
 
@@ -23,15 +24,17 @@ window.addEventListener("load", async () => {
             }
         })
         .on({
-            "/": () => document.getElementById("content").innerHTML = `
+            "/": () => {document.getElementById("content").innerHTML = `
                 <h2>donnadonna</h2>
-                <p>donnadonna homepage</p>
-            `,
-            "/survey-navn": () => {
+                <p>donnadonna homepage</p>`; 
+                document.getElementById("surveybar").innerHTML = ""},
+            "/survey": () => {
+                renderTemplate(templateSurveyBar, "surveybar")
                 renderTemplate(templateSurveyNavn, "content")
-                //indsæt js for surveyNavn
+                //indsæt js for survey
             },
             "/survey-alder": () => {
+                renderTemplate(templateSurveyBar, "surveybar")
                 renderTemplate(templateSurveyAlder, "content")
                 //indsæt js for surveyalder
             }
