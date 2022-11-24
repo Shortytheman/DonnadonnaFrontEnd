@@ -87,7 +87,7 @@ ul.progress_bar{
 /* TING */
 
 .info  {
-    display: block; /* Skal hedde "block" for at vises. Skal hedde "none" for at skjule */
+    display: none; /* Skal hedde "block" for at vises. Skal hedde "none" for at skjule */
     position: absolute;
     right: 35%;
     top: -.54em;

@@ -35,12 +35,12 @@ window.addEventListener("load", async () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateSurveyNavn, "content")
                 initSurvey()
-                progressBarColor()
+                progressBarColor(navn)
             },
             "/survey-alder": () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateSurveyAlder, "content")
-                progressBarColor()
+                progressBarColor(alder)
                 
                 //indsæt js for surveyalder
             }

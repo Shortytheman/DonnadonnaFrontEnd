@@ -2,37 +2,38 @@
 // prøv at smide display none her ind i stedet for css, hvis det ikke virker
 // document.getElementById("progressBarColor").style.display = "block";
 
-export async function progressBarColor() {
+export async function progressBarColor(side) {
     
-    const url = getCurrentURL()
 
 
     // Skift til korrekt URL
-    if ("http://127.0.0.1:5500/#/survey") {
+    if (side === "navn") {
         changeBackgroundColor(6)
-    } else if (url === "http://127.0.0.1:5500/DonnadonnaFrontEnd/index.html#/survey-alder") {
+    } else if (side === "alder") {
         changeBackgroundColor(5)
-    } else if (url === "http://127.0.0.1:5500/#/allergier"){
+    } else if (side === "allergier"){
         changeBackgroundColor(4)
         changeDisplay("block", "info")
-    } else if (url === "http://127.0.0.1:5500/#/produkter") {
+    } else if (side === "produkter") {
         changeBackgroundColor(3)
-    } else if (url === "http://127.0.0.1:5500/#/cyklus") {
+    } else if (side === "cyklus") {
         changeBackgroundColor(2)
-    } else if (url === "http://127.0.0.1:5500/#/frekvens") {
+    } else if (side === "frekvens") {
         changeBackgroundColor(1)
-    } else if (url === "http://127.0.0.1:5500/#/svar") {
+    } else if (side === "svar") {
         changeBackgroundColor(0)
     }
 } 
 
 function changeBackgroundColor(number) {
-    var count = 0;
-    for (var i = 0; i < 7; i++) {
-        if (number > i) {
-            count++;
-        }
-    }
+    var count = 5;
+
+    //for (var i = 0; i < 7; i++) {
+    //    if (number > i) {
+    //        count++;
+    //    }
+    //}
+
     if (count === 0) {
         changeColor("black", "alder")
         changeColor("black", "allergier")
@@ -69,11 +70,11 @@ function changeBackgroundColor(number) {
         changeColor("white", "frekvens")
         changeColor("white", "svar")
     } else if (count === 5)  {
-        changeColor("black", "alder")
-        changeColor("white", "allergier")
-        changeColor("white", "produkter")
-        changeColor("white", "cyklus")
-        changeColor("white", "frekvens")
+        changeColor("rgb(255, 102, 102)", "alder")
+        changeColor("rgb(255, 102, 102)", "allergier")
+        changeColor("rgb(255, 102, 102)", "produkter")
+        changeColor("rgb(255, 102, 102)", "cyklus")
+        changeColor("rgb(255, 102, 102)", "frekvens")
         changeColor("white", "svar")
     } else if (count === 6) {
         changeColor("white", "alder")
