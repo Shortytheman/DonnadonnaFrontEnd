@@ -1,7 +1,6 @@
 
 
 let initialized = false
-    var name = ""
     export function initSurvey(){
         if (!initialized){
             document.getElementById("surveyNameNext").onclick = getSurveyName
@@ -16,7 +15,7 @@ let initialized = false
 
 
   function getSurveyName(){
-    var name = document.getElementById("custName").value
+    let name = document.getElementById("custName").value
     console.log(name);
   }
 
