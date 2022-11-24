@@ -1,0 +1,32 @@
+
+@import url('https://fonts.cdnfonts.com/css/satoshi?styles=135007');
+
+
+body{
+    font-family: 'Satoshi', sans-serif;
+}
+
+.textarea{
+    font-family: 'Satoshi', sans-serif;
+    resize: none;
+    font-size: 20px;
+    font-family: 'Satoshi', sans-serif, ;
+}
+
+::placeholder{
+    font-size: 20px;
+}
+
+.fortsæt{
+    font-family: 'Satoshi', sans-serif !important;
+    width: 8% !important;
+}
+
+.margin{
+    margin-left: 5%;
+}
+
+.hvorfor{
+    border-bottom: 2.5px solid currentColor;
+    text-decoration: none;
+}
