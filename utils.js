@@ -43,6 +43,7 @@ export function renderTemplate(template, contentId) {
    * @param topnav - Id for the element that contains the "navigation structure"
    * @param activeUrl - The URL which are the "active" one
    */
+  
   export function setActiveLink(topnav, activeUrl) {
     const links = document.getElementById(topnav).querySelectorAll("a");
     links.forEach(child => {
