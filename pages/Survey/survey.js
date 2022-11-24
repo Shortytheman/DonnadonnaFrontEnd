@@ -12,16 +12,10 @@
 
 
 
-  function getSurveyName(){
+  async function getSurveyName(){
     var name = document.getElementById("surveyNameNext").value
     console.log(name);
   }
-
-
-
-
-
-
 
 
 
@@ -35,9 +29,8 @@
     const customerDetails = {
         customerName: custName,
         customerEmail: custEmail,
-        phoneNumber: custPhone,
-        companyName: compName,
-        cvrNumber: compCVR
+        custAge: custAge,
+        custAllergies: custAllergies
     }
 
     const options = {}
