@@ -6,9 +6,10 @@ import { setActiveLink, adjustForMissingHash, renderTemplate, loadHtml } from ".
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
+import {initSurvey} from "./pages/Survey/survey.js"
+
 window.addEventListener("load", async () => {
 
-    const templateSurveyBar = await loadHtml("./pages/Survey/surveyBar/surveyBar.html")
     const templateSurveyNavn = await loadHtml("./pages/Survey/surveyNavn/surveyNavn.html")
     const templateSurveyAlder = await loadHtml("./pages/Survey/surveyAlder/surveyAlder.html")
 
@@ -27,14 +28,13 @@ window.addEventListener("load", async () => {
             "/": () => {document.getElementById("content").innerHTML = `
                 <h2>donnadonna</h2>
                 <p>donnadonna homepage</p>`; 
-                document.getElementById("surveybar").innerHTML = ""},
+                document.getElementById("surveybar").style.display = "none"},
             "/survey": () => {
-                renderTemplate(templateSurveyBar, "surveybar")
+                document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateSurveyNavn, "content")
-                //indsæt js for survey
+                initSurvey()
             },
             "/survey-alder": () => {
-                renderTemplate(templateSurveyBar, "surveybar")
                 renderTemplate(templateSurveyAlder, "content")
                 //indsæt js for surveyalder
             }
