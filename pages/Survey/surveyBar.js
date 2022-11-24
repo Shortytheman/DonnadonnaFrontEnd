@@ -34,7 +34,6 @@ function changeBackgroundColor(number) {
             count++;
         }
     }
-
     if (count === 0) {
         changeColor("black", "alder")
         changeColor("black", "allergier")
