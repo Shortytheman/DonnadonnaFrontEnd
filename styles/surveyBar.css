@@ -145,7 +145,11 @@ ul.progress_bar{
 }
 
 
-
+.knapknap {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+}
 
 
  
