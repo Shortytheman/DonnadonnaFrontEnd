@@ -111,6 +111,10 @@ ul.progress_bar{
 
 /* Dumme ting */
 
+.N {
+    margin: 1.2em 0 0 0;
+}
+
 .A {
     margin: 1.2em 0 0 -.6em;
 }
@@ -131,7 +135,7 @@ ul.progress_bar{
 }
 
 .Abo {
-    margin: -1.2em 0 0 9.8em;
+    margin: -1.5em 0 0 9.3em;
 }
 
 /* Logo */
@@ -143,9 +147,5 @@ ul.progress_bar{
     left: 161px;
     top: calc(50% - 64px/2 - 370px);    
 }
-
-
-
-
 
  
