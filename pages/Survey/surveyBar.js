@@ -8,22 +8,22 @@ async function progressBarColor(color) {
     const url = getCurrentURL()
 
 
-    // Skift til korrekt URL¨
+    // Skift til korrekt URL
     if ("http://127.0.0.1:5500/#/survey") {
-        changeBackgroundColor(0)
+        changeBackgroundColor(6)
     } else if (url === "http://127.0.0.1:5500/#/alder") {
-        changeBackgroundColor(1)
+        changeBackgroundColor(5)
     } else if (url === "http://127.0.0.1:5500/#/allergier"){
-        changeBackgroundColor(2)
+        changeBackgroundColor(4)
         changeDisplay("block", "info")
     } else if (url === "http://127.0.0.1:5500/#/produkter") {
         changeBackgroundColor(3)
     } else if (url === "http://127.0.0.1:5500/#/cyklus") {
-        changeBackgroundColor(4)
+        changeBackgroundColor(2)
     } else if (url === "http://127.0.0.1:5500/#/frekvens") {
-        changeBackgroundColor(5)
+        changeBackgroundColor(1)
     } else if (url === "http://127.0.0.1:5500/#/svar") {
-        changeBackgroundColor(6)
+        changeBackgroundColor(0)
     }
 } 
 
