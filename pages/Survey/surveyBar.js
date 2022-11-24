@@ -1,9 +1,8 @@
 
 // prøv at smide display none her ind i stedet for css, hvis det ikke virker
 // document.getElementById("progressBarColor").style.display = "block";
-document.getElementById("knapnknapknap").onclick = progressBarColor
 
-async function progressBarColor(color) {
+export async function progressBarColor() {
     
     const url = getCurrentURL()
 
@@ -11,7 +10,7 @@ async function progressBarColor(color) {
     // Skift til korrekt URL
     if ("http://127.0.0.1:5500/#/survey") {
         changeBackgroundColor(6)
-    } else if (url === "http://127.0.0.1:5500/#/alder") {
+    } else if (url === "http://127.0.0.1:5500/DonnadonnaFrontEnd/index.html#/survey-alder") {
         changeBackgroundColor(5)
     } else if (url === "http://127.0.0.1:5500/#/allergier"){
         changeBackgroundColor(4)
