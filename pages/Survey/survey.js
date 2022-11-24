@@ -15,13 +15,8 @@ let initialized = false
 
 
 
-<<<<<<< HEAD
-  async function getSurveyName(){
-    var name = document.getElementById("surveyNameNext").value
-=======
   function getSurveyName(){
     var name = document.getElementById("custName").value
->>>>>>> ff20ece1e1618be5d378b3d509766a5ecd091a69
     console.log(name);
   }
 
