@@ -8,6 +8,14 @@ let initialized = false
         }
     }
 
+
+    export function getPopover(){
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+        }
+
     //const custEmail = document.getElementById('custEmail').value
     //const custAllergies = document.getElementById('custAllergies').value
 

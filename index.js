@@ -3,17 +3,20 @@ import "./navigo.js"
 import { setActiveLink, adjustForMissingHash, renderTemplate, loadHtml } from "./utils.js"
 
 //Popover functionality in Bootstrap
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
-import {initSurvey} from "./pages/Survey/survey.js"
-import {progressBarColor} from "./pages/Survey/surveyBar.js"
+
+import {initSurvey, getPopover} from "./pages/survey/survey.js"
+import {progressBarColor} from "./pages/survey/surveyBar.js"
+
 
 window.addEventListener("load", async () => {
 
     const templateError = await loadHtml("./pages/error.html")
-    const templateSurveyNavn = await loadHtml("./pages/Survey/surveyNavn/surveyNavn.html")
-    const templateSurveyAlder = await loadHtml("./pages/Survey/surveyAlder/surveyAlder.html")
+    const templateSurveyNavn = await loadHtml("./pages/survey/surveyNavn/surveyNavn.html")
+    const templateSurveyAlder = await loadHtml("./pages/survey/surveyAlder/surveyAlder.html")
+    const templateAllergier= await loadHtml("./pages/survey/surveyallergier/surveyallergier.html")
+    const templateAllergiInfo= await loadHtml("./pages/survey/surveyallergier/surveyallergiInfo.html")
+    const templateProdukter = await loadHtml("./pages/survey/SurveyProdukter/Surveyprodukter.html")
 
     adjustForMissingHash()
 
@@ -35,15 +38,30 @@ window.addEventListener("load", async () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateSurveyNavn, "content")
                 initSurvey()
-                progressBarColor(navn)
+                progressBarColor("navn")
+                getPopover()
             },
             "/survey-alder": () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateSurveyAlder, "content")
-                progressBarColor(alder)
-                
+                progressBarColor("alder")
                 //indsæt js for surveyalder
-            }
+            },
+            "/survey-allergier": () => {
+                document.getElementById("surveybar").style.display = "block"
+                renderTemplate(templateAllergier, "content")
+                progressBarColor("allergier")
+            },
+            "/survey-allergiInfo": () => {
+                document.getElementById("surveybar").style.display = "block"
+                renderTemplate(templateAllergiInfo, "content")
+                progressBarColor("allergiinfo")
+            },
+            "/survey-produkter": () => {
+                document.getElementById("surveybar").style.display = "block"
+                renderTemplate(templateProdukter, "content")
+                progressBarColor("produkter")
+            },
         })
         .notFound(() => {
             renderTemplate(templateError, "content")

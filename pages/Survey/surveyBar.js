@@ -3,15 +3,13 @@
 // document.getElementById("progressBarColor").style.display = "block";
 
 export async function progressBarColor(side) {
-    
-
-
-    // Skift til korrekt URL
     if (side === "navn") {
         changeBackgroundColor(6)
     } else if (side === "alder") {
         changeBackgroundColor(5)
     } else if (side === "allergier"){
+        changeBackgroundColor(4)
+    } else if (side === "allergiinfo"){
         changeBackgroundColor(4)
         changeDisplay("block", "info")
     } else if (side === "produkter") {
@@ -26,13 +24,13 @@ export async function progressBarColor(side) {
 } 
 
 function changeBackgroundColor(number) {
-    var count = 5;
+    var count = 0;
 
-    //for (var i = 0; i < 7; i++) {
-    //    if (number > i) {
-    //        count++;
-    //    }
-    //}
+    for (var i = 0; i < 7; i++) {
+        if (number > i) {
+            count++;
+        }
+    }
 
     if (count === 0) {
         changeColor("black", "alder")
@@ -70,11 +68,11 @@ function changeBackgroundColor(number) {
         changeColor("white", "frekvens")
         changeColor("white", "svar")
     } else if (count === 5)  {
-        changeColor("rgb(255, 102, 102)", "alder")
-        changeColor("rgb(255, 102, 102)", "allergier")
-        changeColor("rgb(255, 102, 102)", "produkter")
-        changeColor("rgb(255, 102, 102)", "cyklus")
-        changeColor("rgb(255, 102, 102)", "frekvens")
+        changeColor("black", "alder")
+        changeColor("white", "allergier")
+        changeColor("white", "produkter")
+        changeColor("white", "cyklus")
+        changeColor("white", "frekvens")
         changeColor("white", "svar")
     } else if (count === 6) {
         changeColor("white", "alder")
