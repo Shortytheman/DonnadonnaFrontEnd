@@ -84,10 +84,6 @@ function changeBackgroundColor(number) {
     }
 }
 
-function getCurrentURL () {
-    return window.location.href
-  }
-
  function changeColor(color, elementId) {
      document.getElementById(elementId).style.backgroundColor = color
 }
