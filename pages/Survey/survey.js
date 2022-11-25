@@ -21,12 +21,6 @@ let initialized = false
 
 
 
-
-
-
-
-
-
 /*async function surveyResults(){
 
     const custName = document.getElementById('custName').value
@@ -37,9 +31,8 @@ let initialized = false
     const customerDetails = {
         customerName: custName,
         customerEmail: custEmail,
-        phoneNumber: custPhone,
-        companyName: compName,
-        cvrNumber: compCVR
+        custAge: custAge,
+        custAllergies: custAllergies
     }
 
     const options = {}
