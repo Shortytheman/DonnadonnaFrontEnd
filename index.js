@@ -2,11 +2,11 @@ import "./navigo.js"
 
 import { setActiveLink, adjustForMissingHash, renderTemplate, loadHtml } from "./utils.js"
 
-//Popover functionality in Bootstrap
-
-
-import {initSurvey, getPopover} from "./pages/survey/survey.js"
-import {progressBarColor} from "./pages/survey/surveyBar.js"
+import { initSurveyNavn } from "./pages/survey/surveyNavn/surveyNavn.js"
+import { initSurveyAlder } from "./pages/survey/surveyAlder/surveyAlder.js"
+import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyallergier.js"
+import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo.js"
+import { initSurveyProdukter } from "./pages/survey/surveyProdukter/Surveyprodukter.js"
 
 
 window.addEventListener("load", async () => {
@@ -14,9 +14,9 @@ window.addEventListener("load", async () => {
     const templateError = await loadHtml("./pages/error.html")
     const templateSurveyNavn = await loadHtml("./pages/survey/surveyNavn/surveyNavn.html")
     const templateSurveyAlder = await loadHtml("./pages/survey/surveyAlder/surveyAlder.html")
-    const templateAllergier= await loadHtml("./pages/survey/surveyallergier/surveyallergier.html")
-    const templateAllergiInfo= await loadHtml("./pages/survey/surveyallergier/surveyallergiInfo.html")
-    const templateProdukter = await loadHtml("./pages/survey/SurveyProdukter/Surveyprodukter.html")
+    const templateAllergier= await loadHtml("./pages/survey/surveyAllergier/surveyAllergier.html")
+    const templateAllergiInfo= await loadHtml("./pages/survey/surveyAllergier/surveyAllergiInfo.html")
+    const templateProdukter = await loadHtml("./pages/survey/surveyProdukter/surveyProdukter.html")
 
     adjustForMissingHash()
 
@@ -37,30 +37,27 @@ window.addEventListener("load", async () => {
             "/survey": () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateSurveyNavn, "content")
-                initSurvey()
-                progressBarColor("navn")
-                getPopover()
+                initSurveyNavn()
             },
             "/survey-alder": () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateSurveyAlder, "content")
-                progressBarColor("alder")
-                //indsæt js for surveyalder
+                initSurveyAlder()
             },
             "/survey-allergier": () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateAllergier, "content")
-                progressBarColor("allergier")
+                initSurveyAllergier()
             },
             "/survey-allergiInfo": () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateAllergiInfo, "content")
-                progressBarColor("allergiinfo")
+                initSurveyAllgergiInfo()
             },
             "/survey-produkter": () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateProdukter, "content")
-                progressBarColor("produkter")
+                initSurveyProdukter()
             },
         })
         .notFound(() => {
