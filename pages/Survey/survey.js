@@ -1,5 +1,3 @@
-
-
 let initialized = false
     export function initSurvey(){
         if (!initialized){
@@ -7,21 +5,6 @@ let initialized = false
             initialized = true
         }
     }
-
-
-    export function getPopover(){
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-          return new bootstrap.Popover(popoverTriggerEl)
-        })
-        }
-
-    //const custEmail = document.getElementById('custEmail').value
-    //const custAllergies = document.getElementById('custAllergies').value
-
-
-
-
   function getSurveyName(){
     let name = document.getElementById("custName").value
     console.log(name);
