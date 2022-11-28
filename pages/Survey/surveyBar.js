@@ -5,21 +5,28 @@
 export async function progressBarColor(side) {
     if (side === "navn") {
         changeBackgroundColor(6)
+        changeDisplay("none", "info")
     } else if (side === "alder") {
         changeBackgroundColor(5)
+        changeDisplay("none", "info")
     } else if (side === "allergier"){
         changeBackgroundColor(4)
+        changeDisplay("none", "info")
     } else if (side === "allergiinfo"){
         changeBackgroundColor(4)
         changeDisplay("block", "info")
     } else if (side === "produkter") {
         changeBackgroundColor(3)
+        changeDisplay("block", "info")
     } else if (side === "cyklus") {
         changeBackgroundColor(2)
+        changeDisplay("block", "info")
     } else if (side === "frekvens") {
         changeBackgroundColor(1)
+        changeDisplay("block", "info")
     } else if (side === "svar") {
         changeBackgroundColor(0)
+        changeDisplay("block", "info")
     }
 } 
 
