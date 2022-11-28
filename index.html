@@ -21,6 +21,7 @@
     crossorigin="anonymous"></script>
   <script src="index.js" type="module"></script>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-size:larger">
     <div class="container-fluid">
@@ -41,60 +42,76 @@
 
   <div id="surveybar">
     <div>
-      <div>
-          <img class="survey-logo" src="../../../images/logo_blue.png" alt="logo">
-      </div>
-      <div class="survey_bar">
-          <ul class="progress_bar">
-              <li class="activated"><span>
-                      <p class="N" >Navn</p>
-                  </span>
-              </li>
-              <li id="alder">
-                  <span>
-                      <p class="S">Alder</p>
-                  </span>
-              </li>
-              <li id="allergier">
-                  <span>
-                      <p class="A">Allergier</p>
-                      <div class="info" id="progressBarColor">
-                          <p class="p-info">i</p>
-                      </div>
-                  </span>
-              </li>
-              <li id="produkter">
-                  <span>
-                      <p class="P">Produkter</p>
-                  </span>
-              </li>
-              <li id="cyklus">
-                  <span>
-                      <p class="C">Cyklus</p>
-                  </span>
-              </li>
-              <li id="frekvens">
-                  <span>
-                      <p class="F">Frekvens</p>
-                  </span>
-              </li>
-              <li id="svar">
-                  <span>
-                      <p class="S">Svar</p>
-                      <p class="Abo">Abonnement</p>
-                  </span>
-              </li>
-          </ul>
-      </div>
-      <br>
-<br>
-<br>
-<br>
-<br>
+      <img class="survey-logo" src="images/logo_blue.png" alt="logo">
+    </div>
+    <div class="survey_bar">
+      <ul class="progress_bar">
+        <li class="subject">
+          <span class="firstCircle">
+          </span>
+          <span class="line">
+          </span>
+          <p class="N">Navn</p>
+        </li>
+        <li class="subject">
+          <span class="circle" id="alder">
+          </span>
+          <span class="line">
+          </span>
+          <p class="S">Alder</p>
+        </li>
+        <li class="subject">
+          <span class="circle" id="allergier">
+          </span>
+          <span class="line">
+          </span>
+          <p class="A">Allergier</p>
+          <div class="info" id="info">
+            <p class="p-info">i</p>
+          </div>
+        </li>
+        <li class="subject">
+          <span class="circle" id="produkter">
+          </span>
+          <span class="line">
+          </span>
+          <p class="P">Produkter</p>
+        </li>
+        <li class="subject">
+          <span class="circle" id="cyklus">
+          </span>
+          <span class="line">
+          </span>
+          <p class="C">Cyklus</p>
+        </li>
+        <li class="subject">
+          <span class="circle" id="frekvens">
+          </span>
+          <span class="line">
+          </span>
+          <p class="F">Frekvens</p>
+        </li>
+        <li class="subject">
+          <span class="circle" id="svar">
+          </span>
+          <span class="line">
+          </span>
+          <p class="S">Svar</p>
+        </li>
+        <li class="subject">
+          <span class="circle" id="abonnement">
+          </span>
+          <p class="Abo">Dit Abonnement</p>
+        </li>
+      </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
 
-  </div>
-  </div>
-  
   <div id="content" style="margin:5%;margin-top:3%;"></div>
 
 </body>
