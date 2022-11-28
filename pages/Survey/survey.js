@@ -1,30 +1,12 @@
-
-
 let initialized = false
-    var name = ""
     export function initSurvey(){
         if (!initialized){
             document.getElementById("surveyNameNext").onclick = getSurveyName
             initialized = true
         }
     }
-
-
-    export function getPopover(){
-        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-          return new bootstrap.Popover(popoverTriggerEl)
-        })
-        }
-
-    //const custEmail = document.getElementById('custEmail').value
-    //const custAllergies = document.getElementById('custAllergies').value
-
-
-
-
   function getSurveyName(){
-    var name = document.getElementById("custName").value
+    let name = document.getElementById("custName").value
     console.log(name);
   }
 
