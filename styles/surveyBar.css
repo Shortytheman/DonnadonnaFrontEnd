@@ -22,7 +22,7 @@ ul.progress_bar {
   }
   
   ul.progress_bar li{
-    width: 11em;
+    width: 12%;
     float: left;
     height: 175%;
     list-style: none;
@@ -36,7 +36,7 @@ ul.progress_bar {
     position: relative;
     right: 0;
     height: 0.08em;
-    width: 10em;
+    width: 100%;
     background-color: black;
 
     top: -1.43em;
