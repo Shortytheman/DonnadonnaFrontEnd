@@ -67,7 +67,7 @@ window.addEventListener("load", async () => {
             renderTemplate(templateError, "content")
             document.getElementById("surveybar").style.display = "none"
         })
-        .resolve()
+        .resolve()  
 });
 
 window.onerror = function (errorMsg, url, lineNumber, column, errorObj) {
