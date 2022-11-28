@@ -33,3 +33,28 @@
     height: 150px;
     width: 100px;
 }
+
+/* KNAPPER */
+
+.knapper {
+  display: flex;
+  align-items: center;
+}
+
+.fortsæt{
+  font-family: 'Satoshi', sans-serif;
+  width: 8%;
+  height: 2.5em;
+
+  margin-left: 10px;
+}
+
+.previous {
+  font-family: 'Satoshi', sans-serif;
+  width: 2%;
+  height: 2.5em;  
+  
+
+  border: none;
+  padding-bottom: 5px;
+}
