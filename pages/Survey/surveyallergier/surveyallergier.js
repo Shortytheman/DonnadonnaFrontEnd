@@ -10,9 +10,9 @@ export function initSurveyAllergier() {
 
 function removebox() {
   if (document.getElementById('myCheck').checked) {
-      document.getElementById('area').style.display = 'none';
+      document.getElementById('custAllergies').style.display = 'none';
   } else {
-      document.getElementById('area').style.display = 'block';
+      document.getElementById('custAllergies').style.display = 'block';
   }
 }
 
