@@ -1,8 +1,10 @@
 import { getPopover } from "../../../surveyUtils.js";
+import {progressBarColor} from "../surveyBar.js"
 
 export function initSurveyProdukter() {
   getPopover()
   virkerIkke()
+  progressBarColor("produkter")
 }
 
 function virkerIkke() {
