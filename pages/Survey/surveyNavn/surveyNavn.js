@@ -4,13 +4,15 @@ import {progressBarColor} from "../surveyBar.js"
 let initialized = false
 export function initSurveyNavn() {
   if (!initialized) {
-    document.getElementById("surveyNameNext").onclick = getSurveyName
+    document.getElementById("btn-surveyNameNext").onclick = getSurveyName
     getPopover()
     initialized = true
   }
   progressBarColor("navn")
 }
+
+export let name;
 function getSurveyName() {
-  let name = document.getElementById("custName").value
+  name = document.getElementById("custName").value
   console.log(name);
 }
