@@ -1,5 +1,5 @@
 import { getPopover } from "../../../surveyUtils.js"
-import {progressBarColor} from "../surveyBar.js"
+import { progressBarColor } from "../surveyBar.js"
 
 let initialized = false
 export function initSurveyNavn() {
