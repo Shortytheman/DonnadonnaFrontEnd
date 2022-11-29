@@ -1,5 +1,6 @@
 import { getPopover } from "../../../surveyUtils.js";
 
+
 export function initSurveyProdukter() {
   getPopover()
   document.getElementById("Produkter").onclick = virkerIkke
