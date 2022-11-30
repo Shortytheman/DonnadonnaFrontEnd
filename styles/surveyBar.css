@@ -124,5 +124,9 @@ ul.progress_bar li span.firstCircle {
     left: 161px;
 }
 
+.survey-container {
+    display: flex;
+    align-items: center;
 
+}
 
