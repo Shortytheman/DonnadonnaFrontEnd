@@ -1,3 +1,7 @@
+.checkbox{
+    max-width: 68px !important; 
+}
+
 .boks {
     width: 600px;
     height: 325px;
@@ -15,7 +19,6 @@
 }
 
 .infobillede {
-
     margin-left: 10%!important;    
     width: 25px;
     height: 25px;

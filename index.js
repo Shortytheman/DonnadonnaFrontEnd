@@ -8,6 +8,7 @@ import { initSurveyAlder } from "./pages/survey/surveyAlder/surveyAlder.js"
 import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyallergier.js"
 import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo.js"
 import { initSurveyProdukter } from "./pages/survey/surveyProdukter/Surveyprodukter.js"
+import { initSurveyCyklus } from "./pages/survey/surveyCyklus/surveyCyklus.js"
 
 
 window.addEventListener("load", async () => {
@@ -18,6 +19,8 @@ window.addEventListener("load", async () => {
     const templateAllergier= await loadHtml("./pages/survey/surveyAllergier/surveyAllergier.html")
     const templateAllergiInfo= await loadHtml("./pages/survey/surveyAllergier/surveyAllergiInfo.html")
     const templateProdukter = await loadHtml("./pages/survey/surveyProdukter/surveyProdukter.html")
+    const templateCyklus = await loadHtml("./pages/survey/surveyCyklus/surveyCyklus.html")
+    
 
     adjustForMissingHash()
 
@@ -60,6 +63,11 @@ window.addEventListener("load", async () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateProdukter, "content")
                 initSurveyProdukter()
+            },
+            "/survey-cyklus": () => {
+                document.getElementById("surveybar").style.display = "block"
+                renderTemplate(templateCyklus, "content")
+                initSurveyCyklus()
             },
         })
         .notFound(() => {
