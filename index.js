@@ -5,9 +5,9 @@ import { getPersonalDetails } from "./surveyUtils.js"
 
 import { initSurveyNavn } from "./pages/survey/surveyNavn/surveyNavn.js"
 import { initSurveyAlder } from "./pages/survey/surveyAlder/surveyAlder.js"
-import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyallergier.js"
+import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyAllergier.js"
 import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo.js"
-import { initSurveyProdukter } from "./pages/survey/surveyProdukter/Surveyprodukter.js"
+import { initSurveyProdukter } from "./pages/survey/surveyProdukter/surveyProdukter.js"
 import { initSurveyCyklus } from "./pages/survey/surveyCyklus/surveyCyklus.js"
 
 
