@@ -1,6 +1,7 @@
 import "./navigo.js"
 
 import { setActiveLink, adjustForMissingHash, renderTemplate, loadHtml } from "./utils.js"
+import { getPersonalDetails } from "./surveyUtils.js"
 
 import { initSurveyNavn } from "./pages/survey/surveyNavn/surveyNavn.js"
 import { initSurveyAlder } from "./pages/survey/surveyAlder/surveyAlder.js"
@@ -53,6 +54,7 @@ window.addEventListener("load", async () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateAllergiInfo, "content")
                 initSurveyAllgergiInfo()
+                getPersonalDetails()
             },
             "/survey-produkter": () => {
                 document.getElementById("surveybar").style.display = "block"
