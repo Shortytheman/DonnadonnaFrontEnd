@@ -1,6 +1,6 @@
 import { name } from "./pages/survey/surveyNavn/surveyNavn.js"
 import { age } from "./pages/survey/surveyAlder/surveyAlder.js"
-import { allergies } from "./pages/survey/surveyAllergier/surveyallergier.js"
+import { allergies } from "./pages/survey/surveyAllergier/surveyAllergier.js"
 
 export function getPersonalDetails(){
   let person = {
