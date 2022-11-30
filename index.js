@@ -75,7 +75,7 @@ window.addEventListener("load", async () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateFrekvens, "content")
                 initSurveyFrekvens()
-            }
+            },
         })
         .notFound(() => {
             renderTemplate(templateError, "content")

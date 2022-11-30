@@ -1,5 +1,35 @@
 
+.kasse-container {
+  column-gap: 1em;
+  margin: 5% auto 5% 5% !important;
+}
 
+.kasse {
+ border: 2px solid black;
+
+ width: 400px !important;
+ height: 280px !important;
+
+ margin: 0 5% 0 5%;
+
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.fedTekst {
+  font-size: larger;
+  font-weight: 600;
+
+  margin: 10px 0 30px 0;
+}
+
+.recycle {
+  width: 50px;
+  height: 50px;
+  margin-left: 30px;
+
+}
 
 
 /* KNAPPER */

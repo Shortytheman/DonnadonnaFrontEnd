@@ -1,4 +1,4 @@
-import {getPopover} from "../../../surveyUtils"
+import {getPopover} from "../../../surveyUtils.js"
 import { progressBarColor } from "../surveyBar.js"
 
 export function initSurveyFrekvens() {
