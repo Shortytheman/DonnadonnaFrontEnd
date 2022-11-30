@@ -9,6 +9,7 @@ import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyAllerg
 import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo.js"
 import { initSurveyProdukter } from "./pages/survey/surveyProdukter/surveyProdukter.js"
 import { initSurveyCyklus } from "./pages/survey/surveyCyklus/surveyCyklus.js"
+import { initSurveyFrekvens } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
 
 
 window.addEventListener("load", async () => {
@@ -20,6 +21,7 @@ window.addEventListener("load", async () => {
     const templateAllergiInfo= await loadHtml("./pages/survey/surveyAllergier/surveyAllergiInfo.html")
     const templateProdukter = await loadHtml("./pages/survey/surveyProdukter/surveyProdukter.html")
     const templateCyklus = await loadHtml("./pages/survey/surveyCyklus/surveyCyklus.html")
+    const templateFrekvens = await loadHtml("./pages/survey/surveyFrekvens/surveyFrekvens.html")
     
 
     adjustForMissingHash()
@@ -69,6 +71,11 @@ window.addEventListener("load", async () => {
                 renderTemplate(templateCyklus, "content")
                 initSurveyCyklus()
             },
+            "/survey-frekvens": () => {
+                document.getElementById("surveybar").style.display = "block"
+                renderTemplate(templateFrekvens, "content")
+                initSurveyFrekvens()
+            }
         })
         .notFound(() => {
             renderTemplate(templateError, "content")
