@@ -5,6 +5,7 @@ import { progressBarColor } from "../surveyBar.js";
 export function initSurveyProdukter() {
   getPopover()
   document.getElementById("Produkter").onclick = produktValg
+  document.getElementById("fortsæt").onclick = hentAbonnement
   progressBarColor("produkter")
 }
 
@@ -79,4 +80,15 @@ export function produktValg(evt) {
       document.getElementById("trusseindlæg").innerText = results
     }
   }
+}
+
+export let abonnement = [];
+
+function hentAbonnement(){
+
+//Fylder listen op med antal af produkter fra 0 til 9 som numrene er lavet i HTML (0 = tampon, let. 1 = tampon, regulært osv.)
+for (let i = 0; i < 9; i++){
+  abonnement.push(document.getElementById("num" + i).innerText)
+}
+
 }
