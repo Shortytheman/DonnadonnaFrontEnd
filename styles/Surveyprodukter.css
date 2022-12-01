@@ -76,4 +76,26 @@
 
 .fortsæt{
   margin-left: 75px !important;
+/* KNAPPER */
+
+.knapper {
+  display: flex;
+  align-items: center;
+}
+
+.fortsæt{
+  font-family: 'Satoshi', sans-serif;
+  width: 20%;
+  height: 2.5em;
+
+  margin-left: 10px;
+}
+
+.previous {
+  font-family: 'Satoshi', sans-serif;
+  width: 4%;
+  height: 2.5em;  
+
+  border: none;
+  padding-bottom: 5px;
 }
