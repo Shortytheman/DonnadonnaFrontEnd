@@ -1,16 +1,6 @@
-
-@import url('https://fonts.cdnfonts.com/css/satoshi?styles=135007');
-
-
-body{
-    font-family: 'Satoshi', sans-serif;
-}
-
 .textarea{
-    font-family: 'Satoshi', sans-serif;
     resize: none;
     font-size: 20px;
-    font-family: 'Satoshi', sans-serif, ;
 }
 
 ::placeholder{
@@ -18,36 +8,3 @@ body{
 }
 
 
-.margin{
-    margin-left: 5%;
-}
-
-.hvorfor{
-    font-size: 0,6em;
-    border-bottom: 2.5px solid currentColor;
-    text-decoration: none;
-}
-
-/* KNAPPER */
-
-.knapper {
-    display: flex;
-    align-items: center;
-}
-
-.fortsæt{
-    font-family: 'Satoshi', sans-serif;
-    width: 20%;
-    height: 2.5em;
-  
-    margin-left: 10px;
-  }
-  
-  .previous {
-    font-family: 'Satoshi', sans-serif;
-    width: 4%;
-    height: 2.5em;  
-  
-    border: none;
-    padding-bottom: 5px;
-  }
