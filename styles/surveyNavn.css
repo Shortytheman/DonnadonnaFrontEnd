@@ -23,6 +23,7 @@ body{
 }
 
 .hvorfor{
+    font-size: 0,6em;
     border-bottom: 2.5px solid currentColor;
     text-decoration: none;
 }

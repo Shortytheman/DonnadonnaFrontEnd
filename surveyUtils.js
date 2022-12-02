@@ -1,12 +1,17 @@
 import { name } from "./pages/survey/surveyNavn/surveyNavn.js"
 import { age } from "./pages/survey/surveyAlder/surveyAlder.js"
 import { allergies } from "./pages/survey/surveyAllergier/surveyAllergier.js"
+import { email } from "./pages/survey/surveyEmail.js"
+
+const customerURL = "https://donnadonna.azurewebsites.net/api/customers/"
+
 
 export function getPersonalDetails(){
   let person = {
-    pName: name,
-    pAge: age,
-    pAllergies: allergies
+    customerName: name,
+    customerAge: age,
+    customerEmail: email,
+    customerAllergies: allergies
   }
   console.log(person)
 }
