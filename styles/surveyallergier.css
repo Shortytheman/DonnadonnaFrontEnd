@@ -1,5 +1,10 @@
 .checkbox{
-    max-width: 68px !important; 
+    max-width: 68px !important;
+    color: rgb(0, 0, 0) !important;
+}
+.checkboxdiv{
+    display: flex !important;
+    align-items: flex-start !important;
 }
 
 .boks {

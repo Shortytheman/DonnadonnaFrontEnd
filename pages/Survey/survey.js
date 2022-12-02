@@ -1,4 +1,4 @@
-let initialized = false
+/*let initialized = false
     export function initSurvey(){
         if (!initialized){
             document.getElementById("surveyNameNext").onclick = getSurveyName
@@ -10,7 +10,7 @@ let initialized = false
     console.log(name);
   }
 
-
+*/
 
 /*async function surveyResults(){
 
