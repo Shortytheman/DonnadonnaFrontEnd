@@ -4,28 +4,31 @@
 
 export async function progressBarColor(side) {
     if (side === "navn") {
-        changeBackgroundColor(6)
+        changeBackgroundColor(8)
         changeDisplay("none", "info")
     } else if (side === "alder") {
-        changeBackgroundColor(5)
+        changeBackgroundColor(7)
         changeDisplay("none", "info")
     } else if (side === "allergier"){
-        changeBackgroundColor(4)
+        changeBackgroundColor(6)
         changeDisplay("none", "info")
     } else if (side === "allergiinfo"){
-        changeBackgroundColor(4)
+        changeBackgroundColor(6)
         changeDisplay("block", "info")
     } else if (side === "produkter") {
-        changeBackgroundColor(3)
+        changeBackgroundColor(5)
         changeDisplay("block", "info")
     } else if (side === "cyklus") {
-        changeBackgroundColor(2)
+        changeBackgroundColor(4)
         changeDisplay("block", "info")
     } else if (side === "frekvens") {
-        changeBackgroundColor(1)
+        changeBackgroundColor(3)
         changeDisplay("block", "info")
     } else if (side === "svar") {
-        changeBackgroundColor(0)
+        changeBackgroundColor(2)
+        changeDisplay("block", "info")
+    } else if (side === "abonnement") {
+        changeBackgroundColor(1)
         changeDisplay("block", "info")
     }
 } 
@@ -33,7 +36,7 @@ export async function progressBarColor(side) {
 function changeBackgroundColor(number) {
     var count = 0;
 
-    for (var i = 0; i < 7; i++) {
+    for (var i = 1; i < 8; i++) {
         if (number > i) {
             count++;
         }
@@ -46,48 +49,63 @@ function changeBackgroundColor(number) {
         changeColor("black", "cyklus")
         changeColor("black", "frekvens")
         changeColor("black", "svar")
+        changeColor("black", "abonnement")
     } else if (count === 1) {
         changeColor("black", "alder")
         changeColor("black", "allergier")
         changeColor("black", "produkter")
         changeColor("black", "cyklus")
         changeColor("black", "frekvens")
-        changeColor("white", "svar")
+        changeColor("black", "svar")
+        changeColor("white", "abonnement")
     } else if (count === 2) {
+        changeColor("black", "alder")
+        changeColor("black", "allergier")
+        changeColor("black", "produkter")
+        changeColor("black", "cyklus")
+        changeColor("black", "frekvens")
+        changeColor("white", "svar")
+        changeColor("white", "abonnement")
+    } else if (count === 3) {
         changeColor("black", "alder")
         changeColor("black", "allergier")
         changeColor("black", "produkter")
         changeColor("black", "cyklus")
         changeColor("white", "frekvens")
         changeColor("white", "svar")
-    } else if (count === 3) {
+        changeColor("white", "abonnement")
+    } else if (count === 4) {
         changeColor("black", "alder")
         changeColor("black", "allergier")
         changeColor("black", "produkter")
         changeColor("white", "cyklus")
         changeColor("white", "frekvens")
         changeColor("white", "svar")
-    } else if (count === 4) {
+        changeColor("white", "abonnement")
+    } else if (count === 5) {
         changeColor("black", "alder")
         changeColor("black", "allergier")
         changeColor("white", "produkter")
         changeColor("white", "cyklus")
         changeColor("white", "frekvens")
         changeColor("white", "svar")
-    } else if (count === 5)  {
+        changeColor("white", "abonnement")
+    } else if (count === 6)  {
         changeColor("black", "alder")
         changeColor("white", "allergier")
         changeColor("white", "produkter")
         changeColor("white", "cyklus")
         changeColor("white", "frekvens")
         changeColor("white", "svar")
-    } else if (count === 6) {
+        changeColor("white", "abonnement")
+    } else if (count === 7) {
         changeColor("white", "alder")
         changeColor("white", "allergier")
         changeColor("white", "produkter")
         changeColor("white", "cyklus")
         changeColor("white", "frekvens")
         changeColor("white", "svar")
+        changeColor("white", "abonnement")
     }
 }
 
