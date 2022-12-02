@@ -89,6 +89,7 @@ window.addEventListener("load", async () => {
             },
             "/survey-frekvens": () => {
                 document.getElementById("surveybar").style.display = "block"
+                document.getElementById("div-datepicker").style.display = "none";
                 renderTemplate(templateFrekvens, "content")
                 initSurveyFrekvens()
             }
