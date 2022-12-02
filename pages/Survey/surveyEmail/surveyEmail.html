@@ -1,23 +1,24 @@
 <div class="template">
+    <h3>Din menstrurationspleje er nu klar</h3><br>
+    <p class="lavOpacityTekst">Før vi kan gemme din personlige menstrurationspleje skal vi bruge din email til at
+        gemme
+        dine data</p>
+    <textarea id="custEmail" rows="5" cols="50" name="navn" class="textarea"
+        placeholder="Skriv din email her, f.eks. us@donnadonna.dk"></textarea><br><br>
     <div>
-        <h3>Din menstrurationspleje er nu klar</h3>
-        <p class="lavOpacityTekst">Før vi kan gemme din personlige menstrurationspleje skal vi bruge din email til at
-            gemme
-            dine data</p>
-        <textarea id="custEmail" rows="5" cols="50" name="navn" class="textarea"
-            placeholder="Skriv din email her, f.eks. us@donnadonna.dk"></textarea>
-        <div>
-            <label><input type="checkbox" id="myCheck"> Jeg accepterer donnadonna's
-                privatlivspolitik
-            </label>
-            <label>
-                <input type="checkbox" id="myCheck"> Jeg vil gerne modtage emails, der kan hjælpe mig og andre kvinder
-                til
-                bedre
-                menstrurationspleje
-            </label>
-        </div>
-        <button id="btn-surveyEmailNext" href="/survey-ditAbo" data-navigo type="button"
+        <label><input type="checkbox" id="myCheck"> Jeg accepterer donnadonna's
+            privatlivspolitik
+        </label>
+        <label>
+            <input type="checkbox" id="myCheck"> Jeg vil gerne modtage emails, der kan hjælpe mig og andre kvinder
+            til
+            bedre
+            menstrurationspleje
+        </label>
+    </div><br>
+    <div class="knapper">
+        <button href="/survey-frekvens" class="previous" data-navigo>&larr;</button>
+        <button id="btn-surveyEmailNext" href="survey-ditAbonnement" data-navigo type="button"
             class="btn btn-primary rounded-0 fortsæt">Fortsæt</button>
     </div>
 </div>
