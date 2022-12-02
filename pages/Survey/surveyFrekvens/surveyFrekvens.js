@@ -9,6 +9,8 @@ export function initSurveyFrekvens() {
 
 export let frequence;
 function getSurveyFrequence() {
-    frequence = document.getElementById("custFrequence").value
+    frequence = document.getElementById("custFrekvens").value
     console.log(frequence);
 }
+
+

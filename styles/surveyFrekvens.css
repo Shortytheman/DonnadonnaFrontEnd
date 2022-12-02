@@ -15,6 +15,16 @@
  display: flex;
  flex-direction: column;
  align-items: center;
+
+ cursor: pointer;
+}
+
+.kasse:hover { 
+  background-color:aliceblue;
+}
+
+.kasse:focus {
+  border: 2px solid #6699CC;
 }
 
 .fedTekst {
@@ -55,3 +65,10 @@
     border: none !important;
     padding-bottom: 5px !important;
   }
+
+
+
+/* KASSE HIGHLIGHTs */
+
+
+
