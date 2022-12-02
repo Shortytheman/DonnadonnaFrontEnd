@@ -11,6 +11,7 @@ import { initSurveyProdukter } from "./pages/survey/surveyProdukter/surveyProduk
 import { initSurveyEmail } from "./pages/survey/surveyEmail/surveyEmail.js"
 import { initSurveyCyklusJohannes } from "./pages/survey/surveyCyklusJohannes/surveyCyklusJohannes.js"
 import { initSurveyFrekvens } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
+import { initDitAbonnement } from "./pages/survey/surveyDitAbonnement/surveyDitAbonnement.js"
 
 
 window.addEventListener("load", async () => {
@@ -23,6 +24,8 @@ window.addEventListener("load", async () => {
     const templateProdukter = await loadHtml("./pages/survey/surveyProdukter/surveyProdukter.html")
     const templateEmail = await loadHtml("./pages/survey/surveyEmail/surveyEmail.html")
     const templateFrekvens = await loadHtml("./pages/survey/surveyFrekvens/surveyFrekvens.html")
+
+    const templateDitAbonnement = await loadHtml("./pages/survey/surveyDitAbonnement/SurveyditAbonnement.html")
     
 
     adjustForMissingHash()
@@ -89,8 +92,16 @@ window.addEventListener("load", async () => {
             },
             "/survey-frekvens": () => {
                 document.getElementById("surveybar").style.display = "block"
+                document.getElementById("div-datepicker").style.display = "none";
                 renderTemplate(templateFrekvens, "content")
                 initSurveyFrekvens()
+            }
+            ,
+            "/survey-ditAbonnement": () => {
+                document.getElementById("surveybar").style.display = "block"
+                document.getElementById("div-datepicker").style.display = "none";
+                renderTemplate(templateDitAbonnement, "content")
+                initDitAbonnement()
             }
         })
         .notFound(() => {

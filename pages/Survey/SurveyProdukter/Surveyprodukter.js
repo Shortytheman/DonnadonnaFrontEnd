@@ -82,9 +82,12 @@ export function produktValg(evt) {
   }
 }
 
-export let abonnement = [];
+export let abonnement
 
 function hentAbonnement(){
+
+abonnement = []
+
 //Fylder listen op med antal af produkter fra 0 til 9 som numrene er lavet i HTML (0 = tampon, let. 1 = tampon, regulært osv.)
 for (let i = 1; i < 11; i++){
   abonnement.push(document.getElementById("num" + i).innerText)
