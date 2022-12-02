@@ -41,7 +41,8 @@ window.addEventListener("load", async () => {
                 <h2>donnadonna</h2>
                 <p>donnadonna homepage</p>`; 
                 document.getElementById("surveybar").style.display = "none"
-                document.getElementById("div-datepicker").style.display = "none"},
+                document.getElementById("div-datepicker").style.display = "none"
+            },
             "/survey": () => {
                 document.getElementById("surveybar").style.display = "block"
                 document.getElementById("div-datepicker").style.display = "none"
@@ -74,23 +75,23 @@ window.addEventListener("load", async () => {
                 initSurveyProdukter()
             },
             "/survey-cyklus-johannes": () => {
-                document.getElementById("content").style.display = "none";
+                document.getElementById("content").innerHTML = ""
                 document.getElementById("surveybar").style.display = "block";
                 document.getElementById("div-datepicker").style.display = "block";
 
                 initSurveyCyklusJohannes()
             },
             "/survey-email": () => {
-                document.getElementById("surveybar").style.display = "block"
-                document.getElementById("div-datepicker").style.display = "none"
-                renderTemplate(templateEmail, "content")
+                document.getElementById("surveybar").style.display = "block";
+                document.getElementById("div-datepicker").style.display = "none";
+                renderTemplate(templateEmail, "content");
                 initSurveyEmail()
             },
             "/survey-frekvens": () => {
                 document.getElementById("surveybar").style.display = "block"
                 renderTemplate(templateFrekvens, "content")
                 initSurveyFrekvens()
-            },
+            }
         })
         .notFound(() => {
             renderTemplate(templateError, "content")

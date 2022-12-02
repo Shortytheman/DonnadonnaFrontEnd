@@ -1,7 +1,7 @@
 import { name } from "./pages/survey/surveyNavn/surveyNavn.js"
 import { age } from "./pages/survey/surveyAlder/surveyAlder.js"
 import { allergies } from "./pages/survey/surveyAllergier/surveyAllergier.js"
-import { email } from "./pages/survey/surveyEmail.js"
+import { email } from "./pages/survey/surveyEmail/surveyEmail.js"
 
 const customerURL = "https://donnadonna.azurewebsites.net/api/customers/"
 
