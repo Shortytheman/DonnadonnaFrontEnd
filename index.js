@@ -8,9 +8,9 @@ import { initSurveyAlder } from "./pages/survey/surveyAlder/surveyAlder.js"
 import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyAllergier.js"
 import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo.js"
 import { initSurveyProdukter } from "./pages/survey/surveyProdukter/surveyProdukter.js"
-import { initSurveyCyklus } from "./pages/survey/surveyCyklus/surveyCyklus.js"
 import { initSurveyEmail } from "./pages/survey/surveyEmail/surveyEmail.js"
 import { initSurveyCyklusJohannes } from "./pages/survey/surveyCyklusJohannes/surveyCyklusJohannes.js"
+import { initSurveyFrekvens } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
 
 
 window.addEventListener("load", async () => {
@@ -21,9 +21,8 @@ window.addEventListener("load", async () => {
     const templateAllergier= await loadHtml("./pages/survey/surveyAllergier/surveyAllergier.html")
     const templateAllergiInfo= await loadHtml("./pages/survey/surveyAllergier/surveyAllergiInfo.html")
     const templateProdukter = await loadHtml("./pages/survey/surveyProdukter/surveyProdukter.html")
-    const templateCyklus = await loadHtml("./pages/survey/surveyCyklus/surveyCyklus.html")
-    const templateCyklusJohannes = await loadHtml("./pages/survey/surveyCyklusJohannes/surveyCyklusJohannes.html")
     const templateEmail = await loadHtml("./pages/survey/surveyEmail/surveyEmail.html")
+    const templateFrekvens = await loadHtml("./pages/survey/surveyFrekvens/surveyFrekvens.html")
     
 
     adjustForMissingHash()
@@ -74,12 +73,6 @@ window.addEventListener("load", async () => {
                 renderTemplate(templateProdukter, "content")
                 initSurveyProdukter()
             },
-            "/survey-cyklus": () => {
-                document.getElementById("surveybar").style.display = "block"
-                document.getElementById("div-datepicker").style.display = "none"
-                renderTemplate(templateCyklus, "content")
-                initSurveyCyklus()
-            },
             "/survey-cyklus-johannes": () => {
                 document.getElementById("content").style.display = "none";
                 document.getElementById("surveybar").style.display = "block";
@@ -92,6 +85,11 @@ window.addEventListener("load", async () => {
                 document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateEmail, "content")
                 initSurveyEmail()
+            },
+            "/survey-frekvens": () => {
+                document.getElementById("surveybar").style.display = "block"
+                renderTemplate(templateFrekvens, "content")
+                initSurveyFrekvens()
             },
         })
         .notFound(() => {
