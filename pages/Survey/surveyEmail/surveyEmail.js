@@ -4,7 +4,7 @@ import {progressBarColor} from "../surveyBar.js"
 
 export function initSurveyEmail() {
     getPopover()
-    progressBarColor("email")
+    progressBarColor("svar")
     document.getElementById("btn-surveyEmailNext").onclick = getSurveyEmail
 }
 

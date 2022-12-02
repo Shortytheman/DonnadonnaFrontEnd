@@ -9,6 +9,8 @@ import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyAllerg
 import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo.js"
 import { initSurveyProdukter } from "./pages/survey/surveyProdukter/surveyProdukter.js"
 import { initSurveyCyklus } from "./pages/survey/surveyCyklus/surveyCyklus.js"
+import { initSurveyEmail } from "./pages/survey/surveyEmail/surveyEmail.js"
+import { initSurveyCyklusJohannes } from "./pages/survey/surveyCyklusJohannes/surveyCyklusJohannes.js"
 
 
 window.addEventListener("load", async () => {
@@ -20,6 +22,8 @@ window.addEventListener("load", async () => {
     const templateAllergiInfo= await loadHtml("./pages/survey/surveyAllergier/surveyAllergiInfo.html")
     const templateProdukter = await loadHtml("./pages/survey/surveyProdukter/surveyProdukter.html")
     const templateCyklus = await loadHtml("./pages/survey/surveyCyklus/surveyCyklus.html")
+    const templateCyklusJohannes = await loadHtml("./pages/survey/surveyCyklusJohannes/surveyCyklusJohannes.html")
+    const templateEmail = await loadHtml("./pages/survey/surveyEmail/surveyEmail.html")
     
 
     adjustForMissingHash()
@@ -37,42 +41,63 @@ window.addEventListener("load", async () => {
             "/": () => {document.getElementById("content").innerHTML = `
                 <h2>donnadonna</h2>
                 <p>donnadonna homepage</p>`; 
-                document.getElementById("surveybar").style.display = "none"},
+                document.getElementById("surveybar").style.display = "none"
+                document.getElementById("div-datepicker").style.display = "none"},
             "/survey": () => {
                 document.getElementById("surveybar").style.display = "block"
+                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateSurveyNavn, "content")
                 initSurveyNavn()
             },
             "/survey-alder": () => {
                 document.getElementById("surveybar").style.display = "block"
+                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateSurveyAlder, "content")
                 initSurveyAlder()
             },
             "/survey-allergier": () => {
                 document.getElementById("surveybar").style.display = "block"
+                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateAllergier, "content")
                 initSurveyAllergier()
             },
             "/survey-allergiInfo": () => {
                 document.getElementById("surveybar").style.display = "block"
+                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateAllergiInfo, "content")
                 initSurveyAllgergiInfo()
                 getPersonalDetails()
             },
             "/survey-produkter": () => {
                 document.getElementById("surveybar").style.display = "block"
+                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateProdukter, "content")
                 initSurveyProdukter()
             },
             "/survey-cyklus": () => {
                 document.getElementById("surveybar").style.display = "block"
+                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateCyklus, "content")
                 initSurveyCyklus()
+            },
+            "/survey-cyklus-johannes": () => {
+                document.getElementById("content").style.display = "none";
+                document.getElementById("surveybar").style.display = "block";
+                document.getElementById("div-datepicker").style.display = "block";
+
+                initSurveyCyklusJohannes()
+            },
+            "/survey-email": () => {
+                document.getElementById("surveybar").style.display = "block"
+                document.getElementById("div-datepicker").style.display = "none"
+                renderTemplate(templateEmail, "content")
+                initSurveyEmail()
             },
         })
         .notFound(() => {
             renderTemplate(templateError, "content")
             document.getElementById("surveybar").style.display = "none"
+            document.getElementById("div-datepicker").style.display = "none"
         })
         .resolve()  
 });
