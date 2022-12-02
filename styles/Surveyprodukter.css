@@ -1,10 +1,6 @@
 /* Google fonts import link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-* {
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
 
 .wrapper {
   height: 30px;
@@ -61,7 +57,7 @@
 .heleprodukt{
   display: flex;
   flex-direction: column;
-  margin-left: 6%;
+  margin-right: 6em;
 }
 
 .total{
@@ -72,28 +68,4 @@
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
-}
-
-/* KNAPPER */
-
-.knapper {
-  display: flex;
-  align-items: center;
-}
-
-.fortsæt{
-  font-family: 'Satoshi', sans-serif;
-  width: 20%;
-  height: 2.5em;
-
-  margin-left: 10px;
-}
-
-.previous {
-  font-family: 'Satoshi', sans-serif;
-  width: 4%;
-  height: 2.5em;  
-
-  border: none;
-  padding-bottom: 5px;
 }

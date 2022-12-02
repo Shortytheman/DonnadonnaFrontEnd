@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donnadonna</title>
   <!-- SAML DE DER CSS FILER -->
+  <link rel="stylesheet" href="styles/survey.css">
   <link rel="stylesheet" href="styles/surveyNavn.css">
   <link rel="stylesheet" href="styles/surveyAlder.css">
   <link rel="stylesheet" href="styles/surveyBar.css">
@@ -116,20 +117,25 @@
     <br>
   </div>
 
-  <div class="survey-container" id="content" style="margin:5%;margin-top:3%;"></div>
-  
-  <div id="div-datepicker">
-    <h3>Hvornår regner du med at få din næste menstruation?</h3>
-    <p>
-      <u data-bs-toggle="popover" data-bs-html="true" data-bs-trigger="focus" tabindex="0"
+  <div class="survey-container" id="content"></div>
+
+  <div class="survey-container" id="div-datepicker">
+    <h3>Hvornår regner du med at få din næste menstruation?</h3><br>
+    <h6>
+      <p>
+        <u data-bs-toggle="popover" data-bs-html="true" data-bs-trigger="focus" tabindex="0"
           data-bs-title="Hvorfor spørger vi?"
           data-bs-content="Vi bruger datoen for din næste menstruation til at beregne hvornår du senest skal have modtaget din ordre fra os. <br /><br /> Vi bruger også datoen til at beregne dine efterfølgende leveringer.">Hvorfor
           spørger vi?</u>
-    </p>
+      </p>
+    </h6><br><br>
     <div id="datepicker"></div>
     <div id="date-el"></div>
-    <button id="btn-datepickerNext" href="/survey-ditabo" data-navigo type="button"
-      class="btn btn-primary rounded-0 fortsæt">Fortsæt</button>
+    <div class="knapper">
+      <button href="/survey-produkter" class="previous" data-navigo>&larr;</button>
+      <button id="btn-datepickerNext" href="/survey-frekvens" data-navigo type="button"
+        class="btn btn-primary rounded-0 fortsæt">Fortsæt</button>
+    </div>
   </div>
 
 

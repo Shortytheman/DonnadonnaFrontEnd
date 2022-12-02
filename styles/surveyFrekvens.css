@@ -42,33 +42,3 @@
 }
 
 
-/* KNAPPER */
-
-.knapper {
-    display: flex !important;
-    align-items: center !important;
-}
-
-.fortsæt{
-    font-family: 'Satoshi', sans-serif !important;
-    width: 20% !important;
-    height: 2.5em !important;
-  
-    margin-left: 10px !important;
-  }
-  
-  .previous {
-    font-family: 'Satoshi', sans-serif !important;
-    width: 4% !important;
-    height: 2.5em !important;  
-  
-    border: none !important;
-    padding-bottom: 5px !important;
-  }
-
-
-
-/* KASSE HIGHLIGHTs */
-
-
-
