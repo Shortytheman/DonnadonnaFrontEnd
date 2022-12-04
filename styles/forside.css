@@ -1,0 +1,150 @@
+body, html {
+  width: 1920px;
+  height: 5000px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar START */
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 1.1em;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar {
+    background-color: #ffffff00;
+    padding: 0;
+    position: relative;
+    
+  }
+
+  .navbar .navbar-brand {
+    padding: 0 0.7em;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    padding: 1em 0;
+  }
+
+  .navbar .navbar-nav .nav-item {
+    margin: 0 1em;
+  }
+}
+
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #ffffff;
+  width: 0%;
+  content: "";
+  height: 4px;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+
+.navbar .navbar-nav .nav-item::after {
+  transition: all 0.5s;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  flex-basis: auto;
+  display: flex !important;
+  justify-content: flex-end;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255, 255, 255) !important;
+  font-family: sans-serif;
+  font-weight: bold;
+
+}
+
+.navbar-logo {
+  max-height: 200px;
+  max-width: auto;
+  display: flex;
+  align-content: center !important;
+}
+.knap1-nav {
+  max-height: 50px;
+  max-width: auto;
+}
+
+/*navbar SLUT*/
+
+/*Forside billede1 START*/
+.forsidebillede1{
+
+  position: absolute;
+  height: 1080px;
+  width: 1920px;
+
+  display: flex;
+}
+.info-boks{
+  position: relative;
+    color: white;
+    margin-top: 150px;
+    margin-left: 200px;
+    z-index: 0;
+    
+    
+}
+h2{
+  font-size: 50px!important;
+  font-weight: bold!important;
+}
+h1{
+  font-weight: lighter!important;
+  font-size: 30px!important;
+
+}
+.tagtest {
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid #000000;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.tagtest:hover {
+  background-color: #000000; /* Green */
+  color: white;
+}
+.blåbar{
+  
+  position: relative;
+  
+  width: 1920px;
+  margin-top: 200px;
+
+  display: flex;
+}
+.hvidbgtagtest{
+  
+  position: relative;
+  
+  width: 1920px;
+  margin-top: 100px;
+
+  display: flex;
+}
