@@ -1,17 +1,13 @@
 import "./navigo.js"
 
 import { setActiveLink, adjustForMissingHash, renderTemplate, loadHtml } from "./utils.js"
-import { getPersonalDetails } from "./surveyUtils.js"
 
 import { initSurveyNavn } from "./pages/survey/surveyNavn/surveyNavn.js"
 import { initSurveyAlder } from "./pages/survey/surveyAlder/surveyAlder.js"
-import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyAllergier.js"
+import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyallergier.js"
 import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo.js"
-import { initSurveyProdukter } from "./pages/survey/surveyProdukter/surveyProdukter.js"
-import { initSurveyEmail } from "./pages/survey/surveyEmail/surveyEmail.js"
-import { initSurveyCyklusJohannes } from "./pages/survey/surveyCyklusJohannes/surveyCyklusJohannes.js"
-import { initSurveyFrekvens } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
-import { initDitAbonnement } from "./pages/survey/surveyDitAbonnement/surveyDitAbonnement.js"
+import { initSurveyProdukter } from "./pages/survey/surveyProdukter/Surveyprodukter.js"
+import { initSurveyCyklus } from "./pages/survey/surveyCyklus/surveyCyklus.js"
 
 
 window.addEventListener("load", async () => {
@@ -22,10 +18,7 @@ window.addEventListener("load", async () => {
     const templateAllergier= await loadHtml("./pages/survey/surveyAllergier/surveyAllergier.html")
     const templateAllergiInfo= await loadHtml("./pages/survey/surveyAllergier/surveyAllergiInfo.html")
     const templateProdukter = await loadHtml("./pages/survey/surveyProdukter/surveyProdukter.html")
-    const templateEmail = await loadHtml("./pages/survey/surveyEmail/surveyEmail.html")
-    const templateFrekvens = await loadHtml("./pages/survey/surveyFrekvens/surveyFrekvens.html")
-
-    const templateDitAbonnement = await loadHtml("./pages/survey/surveyDitAbonnement/SurveyditAbonnement.html")
+    const templateCyklus = await loadHtml("./pages/survey/surveyCyklus/surveyCyklus.html")
     
 
     adjustForMissingHash()
@@ -43,71 +36,41 @@ window.addEventListener("load", async () => {
             "/": () => {document.getElementById("content").innerHTML = `
                 <h2>donnadonna</h2>
                 <p>donnadonna homepage</p>`; 
-                document.getElementById("surveybar").style.display = "none"
-                document.getElementById("div-datepicker").style.display = "none"
-            },
+                document.getElementById("surveybar").style.display = "none"},
             "/survey": () => {
                 document.getElementById("surveybar").style.display = "block"
-                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateSurveyNavn, "content")
                 initSurveyNavn()
             },
             "/survey-alder": () => {
                 document.getElementById("surveybar").style.display = "block"
-                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateSurveyAlder, "content")
                 initSurveyAlder()
             },
             "/survey-allergier": () => {
                 document.getElementById("surveybar").style.display = "block"
-                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateAllergier, "content")
                 initSurveyAllergier()
             },
             "/survey-allergiInfo": () => {
                 document.getElementById("surveybar").style.display = "block"
-                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateAllergiInfo, "content")
                 initSurveyAllgergiInfo()
-                getPersonalDetails()
             },
             "/survey-produkter": () => {
                 document.getElementById("surveybar").style.display = "block"
-                document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateProdukter, "content")
                 initSurveyProdukter()
             },
-            "/survey-cyklus-johannes": () => {
-                document.getElementById("content").innerHTML = ""
-                document.getElementById("surveybar").style.display = "block";
-                document.getElementById("div-datepicker").style.display = "block";
-
-                initSurveyCyklusJohannes()
-            },
-            "/survey-email": () => {
-                document.getElementById("surveybar").style.display = "block";
-                document.getElementById("div-datepicker").style.display = "none";
-                renderTemplate(templateEmail, "content");
-                initSurveyEmail()
-            },
-            "/survey-frekvens": () => {
+            "/survey-cyklus": () => {
                 document.getElementById("surveybar").style.display = "block"
-                document.getElementById("div-datepicker").style.display = "none";
-                renderTemplate(templateFrekvens, "content")
-                initSurveyFrekvens()
-            }
-            ,
-            "/survey-ditAbonnement": () => {
-                document.getElementById("surveybar").style.display = "block"
-                document.getElementById("div-datepicker").style.display = "none";
-                renderTemplate(templateDitAbonnement, "content")
-                initDitAbonnement()
-            }
+                renderTemplate(templateCyklus, "content")
+                initSurveyCyklus()
+            },
         })
         .notFound(() => {
             renderTemplate(templateError, "content")
             document.getElementById("surveybar").style.display = "none"
-            document.getElementById("div-datepicker").style.display = "none"
         })
         .resolve()  
 });
