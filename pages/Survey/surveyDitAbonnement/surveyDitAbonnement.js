@@ -3,6 +3,7 @@ import { sanitizeStringWithTableRows } from "../../../utils.js"
 import { progressBarColor } from "../surveyBar.js";
 
 
+console.log(abonnement);
 
 export function initDitAbonnement(){
 let abonnementer = ""
@@ -18,5 +19,7 @@ progressBarColor("abonnement")
 console.log(abonnement);
 console.log(abonnementer);
 document.getElementById("ditAbonnement").innerHTML = abonnementer
+
+}
 */
 }

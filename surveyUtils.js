@@ -10,7 +10,7 @@ const subscriptionURL = "https://donnadonna.azurewebsites.net/api/subscriptions/
 
 let customer;
 
-export async function getPersonalDetails(){
+/*export async function getPersonalDetails(){
   customer = {
     customerName: name,
     customerAge: age,
@@ -47,6 +47,7 @@ options.headers = { "Content-type": "application/json" }
 options.body = JSON.stringify(subscription)
 const addedCustomer = await fetch(subscriptionURL, options).then(handleHttpErrors)
 }
+*/
 
 
 
