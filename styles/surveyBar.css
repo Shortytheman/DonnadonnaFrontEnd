@@ -1,8 +1,7 @@
 
-
 .survey_bar {
     max-width: calc(100% - 20%);
-    margin: 0 auto;
+    margin: -2em 0 0 0;
     padding: 0 10px;
     position: absolute;
     width: 80%;

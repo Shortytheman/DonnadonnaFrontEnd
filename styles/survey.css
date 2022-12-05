@@ -2,49 +2,49 @@
 @import url('https://fonts.cdnfonts.com/css/satoshi?styles=135007');
 
 
-/*/ GENERELT */ 
+/*/ GENERELT */
 
-body{
-    font-family: 'Satoshi', sans-serif;
+body {
+  font-family: 'Satoshi', sans-serif;
 }
 
 .survey-container {
-    display: flex;
-    align-items: center;
-    position: absolute;
+  display: flex;
+  align-items: center;
+  position: absolute;
 
-    padding: 2% 0 0 10%;
+  padding: 5% 0 0 10%;
 }
 
 /* Popover */
 
 .hvorfor {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 
 /* KNAPPER */
 
 .knapper {
-    display: flex;
-    align-items: center;
-  
-    padding-bottom: 10%;
-  }
-  
-  .fortsæt{
-    font-family: 'Satoshi', sans-serif;
-    width: 6em;
-    height: 2.5em;
-  
-    margin-left: 10px;
-  }
-  
-  .previous {
-    font-family: 'Satoshi', sans-serif;
-    width: 2em;
-    height: 2.5em;  
-  
-    border: none;
-    padding-bottom: 5px;
-  }
+  display: flex;
+  align-items: center;
+
+  padding-bottom: 10%;
+}
+
+.fortsæt {
+  font-family: 'Satoshi', sans-serif;
+  width: 6em;
+  height: 2.5em;
+
+  margin-left: 10px;
+}
+
+.previous {
+  font-family: 'Satoshi', sans-serif;
+  width: 2em;
+  height: 2.5em;
+
+  border: none;
+  padding-bottom: 5px;
+}
