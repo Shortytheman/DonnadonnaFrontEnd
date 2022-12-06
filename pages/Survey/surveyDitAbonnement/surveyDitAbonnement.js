@@ -1,22 +1,20 @@
-import { abonnement } from "../SurveyProdukter/Surveyprodukter.js"
 import { sanitizeStringWithTableRows } from "../../../utils.js"
-import { progressBarColor } from "../surveyBar.js";
-
-
+import { progressBarColor } from "../surveyBar.js"
+import { getAbonnementer } from "../surveyProdukter/surveyProdukter.js"
+import { dateRange } from "../surveyCyklusJohannes/surveyCyklusJohannes.js"
+import { frequence } from "../surveyFrekvens/surveyFrekvens.js"
 
 export function initDitAbonnement(){
-let abonnementer = ""
-console.log(abonnement);
-progressBarColor("abonnement")
+    progressBarColor("abonnement")
 
-/*for (let i = 0; i < abonnement.length; i++){
-        abonnementer += ("<tr>" + 
-        abonnement[i]
-        + "</tr>")
+    document.getElementById("dato").innerText = "d. " + dateRange.substring(0,6) + "."
+    document.getElementById("måned").innerText = frequence
+
+    let abonnementer = ""
+
+for (let i = 0; i < getAbonnementer().length; i++){
+        document.getElementById(i).innerText = getAbonnementer()[i]
     }
-    
-console.log(abonnement);
-console.log(abonnementer);
-document.getElementById("ditAbonnement").innerHTML = abonnementer
-*/
 }
+
+
