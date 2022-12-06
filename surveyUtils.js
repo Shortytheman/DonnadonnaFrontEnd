@@ -3,7 +3,7 @@ import { age } from "./pages/survey/surveyAlder/surveyAlder.js"
 import { allergies } from "./pages/survey/surveyAllergier/surveyAllergier.js"
 import { email } from "./pages/survey/surveyEmail/surveyEmail.js"
 import { frequence } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
-import { abonnement } from "./pages/survey/surveyProdukter/surveyProdukter.js"
+import { getAbonnementer } from "./pages/survey/surveyProdukter/surveyProdukter.js"
 import { handleHttpErrors } from "./utils.js"
 
 
@@ -19,7 +19,7 @@ export async function postPersonalDetails() {
     customerEmail: email,
     customerAllergies: allergies,
     customerFreqeunce: frequence,
-    customerAbonnement: abonnement
+    customerAbonnement: getAbonnementer()
   }
 
   const options = {}
