@@ -1,11 +1,11 @@
 import { abonnement } from "../SurveyProdukter/Surveyprodukter.js"
+//import { getAbonnement } from "../SurveyProdukter/Surveyprodukter.js";
 import { sanitizeStringWithTableRows } from "../../../utils.js"
 import { progressBarColor } from "../surveyBar.js";
 
 
-
 export function initDitAbonnement(){
-let abonnementer = ""
+//let abonnementer = getAbonnement()
 console.log(abonnement);
 progressBarColor("abonnement")
 

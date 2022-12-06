@@ -69,7 +69,7 @@ window.addEventListener("load", async () => {
                 document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateAllergiInfo, "content")
                 initSurveyAllgergiInfo()
-                getPersonalDetails()
+                //getPersonalDetails()
             },
             "/survey-produkter": () => {
                 document.getElementById("surveybar").style.display = "block"

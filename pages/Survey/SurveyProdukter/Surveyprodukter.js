@@ -82,15 +82,19 @@ export function produktValg(evt) {
   }
 }
 
-export let abonnement
 
+export let abonnement = []
 function hentAbonnement(){
-
-abonnement = []
-
-//Fylder listen op med antal af produkter fra 0 til 9 som numrene er lavet i HTML (0 = tampon, let. 1 = tampon, regulært osv.)
-for (let i = 1; i < 11; i++){
-  abonnement.push(document.getElementById("num" + i).innerText)
+  
+  //abonnement = []
+  
+  //Fylder listen op med antal af produkter fra 0 til 9 som numrene er lavet i HTML (0 = tampon, let. 1 = tampon, regulært osv.)
+  for (let i = 1; i < 11; i++){
+    abonnement.push(document.getElementById("num" + i).innerText)
+  }
+  console.log(abonnement);
 }
-console.log(abonnement);
-}
+/*
+export function getAbonnement(){
+  return abonnement;
+}*/
