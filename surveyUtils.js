@@ -5,6 +5,7 @@ import { email } from "./pages/survey/surveyEmail/surveyEmail.js"
 import { frequence } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
 import { getAbonnementer } from "./pages/survey/surveyProdukter/surveyProdukter.js"
 import { handleHttpErrors } from "./utils.js"
+import { dateRange } from "./pages/survey/surveyCyklus/surveyCyklus.js"
 
 
 const customerURL = "https://donnadonna.azurewebsites.net/api/customers/"
@@ -18,9 +19,8 @@ export async function postPersonalDetails() {
     customerAge: age,
     customerEmail: email,
     customerAllergies: allergies,
-    customerFreqeunce: frequence,
-    customerAbonnement: getAbonnementer()
-  }
+    //subscription: getSubscription()
+  } 
 
   const options = {}
   options.method = "POST"
@@ -30,6 +30,23 @@ export async function postPersonalDetails() {
 }
 
 let subscription;
+
+function getSubscription() {
+  return subscription = {
+    tamponLight: abonnement[0],
+    tamponRegular: abonnement[1],
+    tamponMax: abonnement[2],
+    sanitaryTowelLight: abonnement[3],
+    sanitaryTowelRegular: abonnement[4],
+    sanitaryTowelMax: abonnement[5],
+    sanitaryTowelNight: abonnement[6],
+    pantyLinersThin: abonnement[7],
+    pantyLinersRegular: abonnement[8],
+    pantyLinersGstring: abonnement[9],
+    deliveryInterval: frequence,
+    firstDeliveryDate: dateRange
+  }
+}
 
 export async function postSubscription() {
   subscription = {
@@ -42,7 +59,9 @@ export async function postSubscription() {
     sanitaryTowelNight: abonnement[6],
     pantyLinersThin: abonnement[7],
     pantyLinersRegular: abonnement[8],
-    pantyLinersGstring: abonnement[9]
+    pantyLinersGstring: abonnement[9],
+    deliveryInterval: frequence,
+    firstDeliveryDate: dateRange
   }
 
   const options = {}
@@ -52,11 +71,13 @@ export async function postSubscription() {
   const addedCustomer = await fetch(subscriptionURL, options).then(handleHttpErrors)
 }
 
-
-
 export function getPopover() {
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
   })
 }
+
+
+
+
