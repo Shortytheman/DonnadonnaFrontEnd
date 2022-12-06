@@ -6,6 +6,7 @@ import { frequence } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
 import { abonnement } from "./pages/survey/surveyProdukter/surveyProdukter.js"
 import { handleHttpErrors } from "./utils.js"
 
+
 const customerURL = "https://donnadonna.azurewebsites.net/api/customers/"
 const subscriptionURL = "https://donnadonna.azurewebsites.net/api/subscriptions/"
 

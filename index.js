@@ -1,7 +1,7 @@
 import "./navigo.js"
 
 import { setActiveLink, adjustForMissingHash, renderTemplate, loadHtml } from "./utils.js"
-import { getPersonalDetails } from "./surveyUtils.js"
+//import { getPersonalDetails } from "./surveyUtils.js"
 
 import { initSurveyNavn } from "./pages/survey/surveyNavn/surveyNavn.js"
 import { initSurveyAlder } from "./pages/survey/surveyAlder/surveyAlder.js"

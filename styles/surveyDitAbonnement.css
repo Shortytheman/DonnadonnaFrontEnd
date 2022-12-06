@@ -1,0 +1,35 @@
+
+
+.abonnementer{
+    border: 2px solid black;
+    width: 300px !important;
+    height: 380px !important;
+}
+
+.rækker{
+    display: flex;
+
+    font-size: small;
+}
+
+.ditabonnement{
+margin-right: 5%;
+margin-left: 5%;
+} 
+
+
+.kip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.abonnementInfo{
+    margin-left: 5%;
+    width: 850px !important;
+    height: 250px !important;
+}
+
+.kroner{
+    margin-left: 120px;
+}
