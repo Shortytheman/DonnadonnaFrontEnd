@@ -9,7 +9,7 @@ import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyAllerg
 import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo.js"
 import { initSurveyProdukter } from "./pages/survey/surveyProdukter/surveyProdukter.js"
 import { initSurveyEmail } from "./pages/survey/surveyEmail/surveyEmail.js"
-import { initSurveyCyklusJohannes } from "./pages/survey/surveyCyklusJohannes/surveyCyklusJohannes.js"
+import { initSurveyCyklus} from "./pages/survey/surveyCyklus/surveyCyklus.js"
 import { initSurveyFrekvens } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
 import { initDitAbonnement } from "./pages/survey/surveyDitAbonnement/surveyDitAbonnement.js"
 
@@ -77,12 +77,12 @@ window.addEventListener("load", async () => {
                 renderTemplate(templateProdukter, "content")
                 initSurveyProdukter()
             },
-            "/survey-cyklus-johannes": () => {
+            "/survey-cyklus": () => {
                 document.getElementById("content").innerHTML = ""
                 document.getElementById("surveybar").style.display = "block";
                 document.getElementById("div-datepicker").style.display = "block";
 
-                initSurveyCyklusJohannes()
+                initSurveyCyklus()
             },
             "/survey-email": () => {
                 document.getElementById("surveybar").style.display = "block";

@@ -1,7 +1,7 @@
 import { getPopover } from "../../../surveyUtils.js"
 import { progressBarColor } from "../surveyBar.js"
 
-export function initSurveyCyklusJohannes() {
+export function initSurveyCyklus() {
   getPopover()
   progressBarColor("cyklus")
   document.getElementById("btn-datepickerNext").onclick = getDate
