@@ -10,7 +10,7 @@ export function initSurveyFrekvens() {
 export let frequence;
 
 function getSurveyId(evt){
-    if (evt.target.id.includes("cust")){
+    if (evt.target.id.includes("hver")){
     frequence = evt.target.id
 }
 console.log(frequence);

@@ -2,8 +2,9 @@ import { name } from "./pages/survey/surveyNavn/surveyNavn.js"
 import { age } from "./pages/survey/surveyAlder/surveyAlder.js"
 import { allergies } from "./pages/survey/surveyAllergier/surveyAllergier.js"
 import { email } from "./pages/survey/surveyEmail/surveyEmail.js"
-import { abonnement } from "./pages/survey/SurveyProdukter/Surveyprodukter.js"
+//import { abonnement } from "./pages/survey/SurveyProdukter/Surveyprodukter.js"
 import { handleHttpErrors } from "./utils.js"
+
 
 const customerURL = "https://donnadonna.azurewebsites.net/api/customers/"
 const subscriptionURL = "https://donnadonna.azurewebsites.net/api/subscriptions/"
