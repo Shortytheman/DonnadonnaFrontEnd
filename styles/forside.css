@@ -1,10 +1,8 @@
 body,
 html {
-  width: 1920;
-  max-width: calc(100% - 20px);
-  margin: 0 auto;
-
-  height: 6000px;
+  width: 1920px;
+  max-width: 100%;
+  height: 5800px;
   background-color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
@@ -36,6 +34,7 @@ html {
 
   .navbar .navbar-brand {
     padding: 0 0.7em;
+    margin-left: 45%;
   }
 
   .navbar .navbar-nav .nav-link {
@@ -96,7 +95,7 @@ html {
   max-width: auto;
 }
 
-/*navbar SLUT*/
+/* Navbar SLUT*/
 
 /*Forside billede1 START*/
 .forsidebillede1 {
@@ -104,6 +103,7 @@ html {
   position: absolute;
   height: 1080px;
   width: 1920px;
+  max-width: 100%;
 
   display: flex;
 
@@ -115,6 +115,8 @@ html {
   margin-top: 150px;
   margin-left: 200px;
   z-index: 0;
+
+
 }
 
 h2 {
@@ -147,12 +149,15 @@ h1 {
   color: white;
 }
 
+/*Forside billede1 SLUT*/
+
 /*blåbar START*/
 .blåbar {
   z-index: 1;
   position: relative;
 
   width: 1920px;
+  max-width: 100%;
   margin-top: 15%;
   display: flex;
 }
@@ -175,6 +180,7 @@ h1 {
 }
 
 /*Blåbar SLUT*/
+
 /*Tekst side3 START*/
 .tekst-side3 {
   margin-left: 25%;
@@ -202,10 +208,12 @@ h1 {
 }
 
 /*Tekst side3 SLUT*/
+
 /*Forside4 START*/
 .forsidebillede4 {
   height: 1080px;
   width: 1920px;
+  max-width: 100%;
 
 }
 
@@ -218,15 +226,20 @@ h1 {
 }
 
 /*Forside4 SLUT*/
+
 /*Forside5 START*/
 .forside5tekst {
   text-align: center;
   margin-top: -20%;
 }
 
+/*Forside5 SLUT*/
+
+/*Forside6 START*/
 .forside6billede {
   height: 1000px;
   width: 1920px;
+  max-width: 100%;
 }
 
 .side6tekst {
@@ -248,17 +261,24 @@ h1 {
   margin-left: 10%;
 }
 
+/*Forside6 SLUT*/
+
+/*Forside7 START*/
 .forside7 {
-  margin-top: 15%;
+  margin-top: 13%;
   text-align: center;
 }
 
+/*Forside7 SLUT*/
 
-
-.fod {
+/*Footer START*/
+.footer-forside {
+  background-color: #235AFF;
   height: 600px;
-
-  background-color: blue;
-
-  border: 1px solid black;
+  width: 1920px;
+  max-width: 100%;
+  position: relative;
+  bottom: 0%;
 }
+
+/*footer SLUT*/
