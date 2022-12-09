@@ -42,7 +42,7 @@ window.addEventListener("load", async () => {
         .on({
             "/": () => {document.getElementById("content").innerHTML = `
                 <h2>donnadonna</h2>
-                <p>donnadonna homepage</p>`; 
+                <p>donnadonna homepage</p>` 
                 document.getElementById("surveybar").style.display = "none"
                 document.getElementById("div-datepicker").style.display = "none"
             },
