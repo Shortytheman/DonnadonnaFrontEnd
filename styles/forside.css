@@ -1,6 +1,8 @@
-body, html {
+body,
+html {
   width: 1920px;
-  height: 6000px;
+  max-width: 100%;
+  height: 5800px;
   background-color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
@@ -21,11 +23,12 @@ body, html {
     background-color: #ffffff00;
     padding: 0;
     position: relative;
-    
+
   }
 
   .navbar .navbar-brand {
     padding: 0 0.7em;
+    margin-left: 45%;
   }
 
   .navbar .navbar-nav .nav-link {
@@ -80,41 +83,47 @@ body, html {
   display: flex;
   align-content: center !important;
 }
+
 .knap1-nav {
   max-height: 50px;
   max-width: auto;
 }
 
-/*navbar SLUT*/
+/* Navbar SLUT*/
 
 /*Forside billede1 START*/
-.forsidebillede1{
+.forsidebillede1 {
 
   position: absolute;
   height: 1080px;
   width: 1920px;
+  max-width: 100%;
 
   display: flex;
 
 }
-.info-boks{
+
+.info-boks {
   position: relative;
-    color: white;
-    margin-top: 150px;
-    margin-left: 200px;
-    z-index: 0;
-    
-    
-}
-h2{
-  font-size: 50px!important;
-  font-weight: bold!important;
-}
-h1{
-  font-weight: lighter!important;
-  font-size: 30px!important;
+  color: white;
+  margin-top: 150px;
+  margin-left: 200px;
+  z-index: 0;
+
 
 }
+
+h2 {
+  font-size: 50px !important;
+  font-weight: bold !important;
+}
+
+h1 {
+  font-weight: lighter !important;
+  font-size: 30px !important;
+
+}
+
 .tagtest {
   transition-duration: 0.4s;
   background-color: white;
@@ -127,40 +136,51 @@ h1{
   font-size: 20px;
   font-weight: bold;
 }
+
 .tagtest:hover {
-  background-color: #000000; /* Green */
+  background-color: #000000;
+  /* Green */
   color: white;
 }
+
+/*Forside billede1 SLUT*/
+
 /*blåbar START*/
-.blåbar{
+.blåbar {
   z-index: 1;
   position: relative;
-  
+
   width: 1920px;
+  max-width: 100%;
   margin-top: 15%;
   display: flex;
 }
-.donnadonnarund{
+
+.donnadonnarund {
   position: relative;
   z-index: 2;
   display: flex;
-  justify-content: flex-end;  
-  margin-top: -9%!important;
-  
+  justify-content: flex-end;
+  margin-top: -9% !important;
+
 }
-.tekst-blåbar{
+
+.tekst-blåbar {
   color: #ffffff;
   z-index: 2;
   position: relative;
   margin-top: -11%;
   text-align: center;
 }
+
 /*Blåbar SLUT*/
+
 /*Tekst side3 START*/
-.tekst-side3{
+.tekst-side3 {
   margin-left: 25%;
 
 }
+
 .tagtest-side3 {
   transition-duration: 0.4s;
   background-color: #235AFF;
@@ -174,19 +194,24 @@ h1{
   font-weight: bold;
   margin-left: 30%;
 }
+
 .tagtest-side3:hover {
-  background-color: #000000; /* Green */
+  background-color: #000000;
+  /* Green */
   color: white;
 }
 
 /*Tekst side3 SLUT*/
+
 /*Forside4 START*/
-.forsidebillede4{
+.forsidebillede4 {
   height: 1080px;
   width: 1920px;
-  
+  max-width: 100%;
+
 }
-.forside4tekst{
+
+.forside4tekst {
   text-align: center;
   margin-top: -50%;
   margin-left: 25%;
@@ -195,31 +220,59 @@ h1{
 }
 
 /*Forside4 SLUT*/
+
 /*Forside5 START*/
-.forside5tekst{
+.forside5tekst {
   text-align: center;
   margin-top: -20%;
 }
-.forside6billede{
+
+/*Forside5 SLUT*/
+
+/*Forside6 START*/
+.forside6billede {
   height: 1000px;
   width: 1920px;
+  max-width: 100%;
 }
-.side6tekst{
+
+.side6tekst {
   margin-top: -40%;
   color: #ffffff;
 }
-.side6tekst1{
+
+.side6tekst1 {
   margin-left: 10%;
 }
-.side6tekst2{
+
+.side6tekst2 {
   margin-right: 10%;
   text-align: right;
-  
+
 }
-.side6tekst3{
- margin-left: 10%;
+
+.side6tekst3 {
+  margin-left: 10%;
 }
-.forside7{
-  margin-top: 15%;
+
+/*Forside6 SLUT*/
+
+/*Forside7 START*/
+.forside7 {
+  margin-top: 13%;
   text-align: center;
 }
+
+/*Forside7 SLUT*/
+
+/*Footer START*/
+.footer-forside {
+  background-color: #235AFF;
+  height: 600px;
+  width: 1920px;
+  max-width: 100%;
+  position: relative;
+  bottom: 0%;
+}
+
+/*footer SLUT*/
