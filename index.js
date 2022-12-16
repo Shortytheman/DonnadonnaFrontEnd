@@ -3,15 +3,15 @@ import "./navigo.js"
 import { setActiveLink, adjustForMissingHash, renderTemplate, loadHtml } from "./utils.js"
 //import { getPersonalDetails } from "./surveyUtils.js"
 
-import { initSurveyNavn } from "./pages/survey/surveyNavn/surveyNavn.js"
-import { initSurveyAlder } from "./pages/survey/surveyAlder/surveyAlder.js"
-import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyAllergier.js"
-import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo.js"
-import { initSurveyProdukter } from "./pages/survey/surveyProdukter/surveyProdukter.js"
-import { initSurveyEmail } from "./pages/survey/surveyEmail/surveyEmail.js"
-import { initSurveyCyklus} from "./pages/survey/surveyCyklus/surveyCyklus.js"
-import { initSurveyFrekvens } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
-import { initDitAbonnement } from "./pages/survey/surveyDitAbonnement/surveyDitAbonnement.js"
+import { initSurveyNavn } from "./pages/Survey/surveyNavn/surveyNavn.js"
+import { initSurveyAlder } from "./pages/Survey/surveyAlder/surveyAlder.js"
+import { initSurveyAllergier } from "./pages/Survey/surveyAllergier/surveyAllergier.js"
+import { initSurveyAllgergiInfo } from "./pages/Survey/surveyAllergier/surveyAllergiInfo.js"
+import { initSurveyProdukter } from "./pages/Survey/surveyProdukter/surveyProdukter.js"
+import { initSurveyEmail } from "./pages/Survey/surveyEmail/surveyEmail.js"
+import { initSurveyCyklus} from "./pages/Survey/surveyCyklus/surveyCyklus.js"
+import { initSurveyFrekvens } from "./pages/Survey/surveyFrekvens/surveyFrekvens.js"
+import { initDitAbonnement } from "./pages/Survey/surveyDitAbonnement/surveyDitAbonnement.js"
 
 
 
@@ -19,15 +19,15 @@ window.addEventListener("load", async () => {
 
     const templateForside = await loadHtml("./pages/forside/forside.html")
     const templateError = await loadHtml("./pages/error.html")
-    const templateSurveyNavn = await loadHtml("./pages/survey/surveyNavn/surveyNavn.html")
-    const templateSurveyAlder = await loadHtml("./pages/survey/surveyAlder/surveyAlder.html")
-    const templateAllergier= await loadHtml("./pages/survey/surveyAllergier/surveyAllergier.html")
-    const templateAllergiInfo= await loadHtml("./pages/survey/surveyAllergier/surveyAllergiInfo.html")
-    const templateProdukter = await loadHtml("./pages/survey/surveyProdukter/surveyProdukter.html")
-    const templateEmail = await loadHtml("./pages/survey/surveyEmail/surveyEmail.html")
-    const templateFrekvens = await loadHtml("./pages/survey/surveyFrekvens/surveyFrekvens.html")
+    const templateSurveyNavn = await loadHtml("./pages/Survey/surveyNavn/surveyNavn.html")
+    const templateSurveyAlder = await loadHtml("./pages/Survey/surveyAlder/surveyAlder.html")
+    const templateAllergier= await loadHtml("./pages/Survey/surveyAllergier/surveyAllergier.html")
+    const templateAllergiInfo= await loadHtml("./pages/Survey/surveyAllergier/surveyAllergiInfo.html")
+    const templateProdukter = await loadHtml("./pages/Survey/surveyProdukter/surveyProdukter.html")
+    const templateEmail = await loadHtml("./pages/Survey/surveyEmail/surveyEmail.html")
+    const templateFrekvens = await loadHtml("./pages/Survey/surveyFrekvens/surveyFrekvens.html")
 
-    const templateDitAbonnement = await loadHtml("./pages/survey/surveyDitAbonnement/SurveyditAbonnement.html")
+    const templateDitAbonnement = await loadHtml("./pages/Survey/surveyDitAbonnement/SurveyditAbonnement.html")
     
 
     adjustForMissingHash()
