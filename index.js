@@ -23,7 +23,9 @@ window.addEventListener("load", async () => {
     const templateSurveyAlder = await loadHtml("./pages/Survey/surveyAlder/surveyAlder.html")
     const templateAllergier= await loadHtml("./pages/Survey/surveyallergier/surveyallergier.html")
     const templateAllergiInfo= await loadHtml("./pages/Survey/surveyallergier/surveyallergiInfo.html")
-    const templateProdukter = await loadHtml("./pages/Survey/surveyProdukter/surveyProdukter.html")
+
+    const templateProdukter = await loadHtml("./pages/Survey/SurveyProdukter/Surveyprodukter.html")
+
     const templateEmail = await loadHtml("./pages/Survey/surveyEmail/surveyEmail.html")
     const templateFrekvens = await loadHtml("./pages/Survey/surveyFrekvens/surveyFrekvens.html")
 
