@@ -3,15 +3,15 @@ import "./navigo.js"
 import { setActiveLink, adjustForMissingHash, renderTemplate, loadHtml } from "./utils.js"
 //import { getPersonalDetails } from "./surveyUtils.js"
 
-import { initSurveyNavn } from "./pages/survey/surveyNavn/surveyNavn"
-import { initSurveyAlder } from "./pages/survey/surveyAlder/surveyAlder"
-import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyallergier"
-import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo"
-import { initSurveyProdukter } from "./pages/survey/surveyProdukter/surveyProdukter"
-import { initSurveyEmail } from "./pages/survey/surveyEmail/surveyEmail"
-import { initSurveyCyklus} from "./pages/survey/surveyCyklus/surveyCyklus"
-import { initSurveyFrekvens } from "./pages/survey/surveyFrekvens/surveyFrekvens"
-import { initDitAbonnement } from "./pages/survey/surveyDitAbonnement/surveyDitAbonnement"
+import { initSurveyNavn } from "./pages/survey/surveyNavn/surveyNavn.js"
+import { initSurveyAlder } from "./pages/survey/surveyAlder/surveyAlder.js"
+import { initSurveyAllergier } from "./pages/survey/surveyAllergier/surveyAllergier.js"
+import { initSurveyAllgergiInfo } from "./pages/survey/surveyAllergier/surveyAllergiInfo.js"
+import { initSurveyProdukter } from "./pages/survey/surveyProdukter/surveyProdukter.js"
+import { initSurveyEmail } from "./pages/survey/surveyEmail/surveyEmail.js"
+import { initSurveyCyklus} from "./pages/survey/surveyCyklus/surveyCyklus.js"
+import { initSurveyFrekvens } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
+import { initDitAbonnement } from "./pages/survey/surveyDitAbonnement/surveyDitAbonnement.js"
 
 
 
@@ -42,12 +42,8 @@ window.addEventListener("load", async () => {
             }
         })
         .on({
+            
             "/": () => {
-                document.getElementById("surveybar").style.display = "none"
-                document.getElementById("div-datepicker").style.display = "none"
-                renderTemplate(templateForside, "content")
-            },
-            "/survey": () => {
                 document.getElementById("surveybar").style.display = "block"
                 document.getElementById("div-datepicker").style.display = "none"
                 renderTemplate(templateSurveyNavn, "content")

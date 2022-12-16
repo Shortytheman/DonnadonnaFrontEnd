@@ -13,8 +13,8 @@ body {
   align-items: center;
   position: absolute;
 
-  /* Skal ind i en anden div til survey
-  padding: 5% 0 0 10%; */
+ /*Skal ind i en anden div til survey*/
+  padding: 5% 0 0 10%; 
 }
 
 /* Popover */
