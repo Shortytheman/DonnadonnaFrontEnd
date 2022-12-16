@@ -16,6 +16,7 @@ import { initDitAbonnement } from "./pages/survey/surveyDitAbonnement/surveyDitA
 
 window.addEventListener("load", async () => {
 
+    const templateForside = await loadHtml("./pages/forside/forside.html")
     const templateError = await loadHtml("./pages/error.html")
     const templateSurveyNavn = await loadHtml("./pages/survey/surveyNavn/surveyNavn.html")
     const templateSurveyAlder = await loadHtml("./pages/survey/surveyAlder/surveyAlder.html")
@@ -40,11 +41,10 @@ window.addEventListener("load", async () => {
             }
         })
         .on({
-            "/": () => {document.getElementById("content").innerHTML = `
-                <h2>donnadonna</h2>
-                <p>donnadonna homepage</p>`; 
+            "/": () => {
                 document.getElementById("surveybar").style.display = "none"
                 document.getElementById("div-datepicker").style.display = "none"
+                renderTemplate(templateForside, "content")
             },
             "/survey": () => {
                 document.getElementById("surveybar").style.display = "block"
