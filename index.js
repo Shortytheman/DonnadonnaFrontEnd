@@ -5,9 +5,9 @@ import { setActiveLink, adjustForMissingHash, renderTemplate, loadHtml } from ".
 
 import { initSurveyNavn } from "./pages/Survey/surveyNavn/surveyNavn.js"
 import { initSurveyAlder } from "./pages/Survey/surveyAlder/surveyAlder.js"
-import { initSurveyAllergier } from "./pages/survey/surveyallergier/surveyAllergier.js"
-import { initSurveyAllgergiInfo } from "./pages/survey/surveyallergier/surveyAllergiInfo.js"
-import { initSurveyProdukter } from "./pages/survey/SurveyProdukter/surveyProdukter.js"
+import { initSurveyAllergier } from "./pages/Survey/surveyallergier/surveyallergier.js"
+import { initSurveyAllgergiInfo } from "./pages/Survey/surveyallergier/surveyallergiInfo.js"
+import { initSurveyProdukter } from "./pages/Survey/SurveyProdukter/Surveyprodukter.js"
 import { initSurveyEmail } from "./pages/Survey/surveyEmail/surveyEmail.js"
 import { initSurveyCyklus} from "./pages/Survey/surveyCyklus/surveyCyklus.js"
 import { initSurveyFrekvens } from "./pages/Survey/surveyFrekvens/surveyFrekvens.js"

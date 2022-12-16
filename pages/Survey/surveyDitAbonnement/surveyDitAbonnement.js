@@ -1,6 +1,6 @@
 import { sanitizeStringWithTableRows } from "../../../utils.js"
 import { progressBarColor } from "../surveyBar.js"
-import { getAbonnementer } from "../SurveyProdukter/surveyProdukter.js"
+import { getAbonnementer } from "../SurveyProdukter/Surveyprodukter.js"
 import { dateRange } from "../surveyCyklus/surveyCyklus.js"
 import { frequence } from "../surveyFrekvens/surveyFrekvens.js"
 import { postPersonalDetails } from "../../../surveyUtils.js"
