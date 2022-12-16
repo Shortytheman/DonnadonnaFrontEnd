@@ -7,13 +7,6 @@ html {
   display: flex;
   flex-direction: column;
 }
-
-@media (max-width:800px) {
-  div {
-    width: max-content;
-  }
-}
-
 /* Navbar START */
 .navbar .navbar-nav .nav-link:hover {
   color: #ffffff;
