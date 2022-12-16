@@ -29,7 +29,7 @@ window.addEventListener("load", async () => {
     const templateEmail = await loadHtml("./pages/Survey/surveyEmail/surveyEmail.html")
     const templateFrekvens = await loadHtml("./pages/Survey/surveyFrekvens/surveyFrekvens.html")
 
-    const templateDitAbonnement = await loadHtml("./pages/Survey/surveyDitAbonnement/SurveyditAbonnement.html")
+    const templateDitAbonnement = await loadHtml("./pages/Survey/surveyDitAbonnement/surveyDitAbonnement.html")
     
 
     adjustForMissingHash()
