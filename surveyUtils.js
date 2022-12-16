@@ -1,9 +1,9 @@
 import { name } from "./pages/survey/surveyNavn/surveyNavn.js"
 import { age } from "./pages/survey/surveyAlder/surveyAlder.js"
-import { allergies } from "./pages/survey/surveyAllergier/surveyAllergier.js"
+import { allergies } from "./pages/survey/surveyallergier/surveyAllergier.js"
 import { email } from "./pages/survey/surveyEmail/surveyEmail.js"
 import { frequence } from "./pages/survey/surveyFrekvens/surveyFrekvens.js"
-import { getAbonnementer } from "./pages/survey/surveyProdukter/surveyProdukter.js"
+import { getAbonnementer } from "./pages/survey/SurveyProdukter/surveyProdukter.js"
 import { handleHttpErrors } from "./utils.js"
 import { dateRange } from "./pages/survey/surveyCyklus/surveyCyklus.js"
 
