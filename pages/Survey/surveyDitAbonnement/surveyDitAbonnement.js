@@ -3,12 +3,12 @@ import { progressBarColor } from "../surveyBar.js"
 import { getAbonnementer } from "../surveyProdukter/surveyProdukter.js"
 import { dateRange } from "../surveyCyklus/surveyCyklus.js"
 import { frequence } from "../surveyFrekvens/surveyFrekvens.js"
-import { postPersonalDetails, postSubscription } from "../../../surveyUtils.js"
+import { postPersonalDetails } from "../../../surveyUtils.js"
 
 export function initDitAbonnement() {
     progressBarColor("abonnement")
 
-    //document.getElementById("dato").innerText = "d. " + dateRange.substring(0,6) + "."
+    document.getElementById("dato").innerText = "d. " + dateRange.substring(0,6) + "."
     document.getElementById("måned").innerText = frequence
     document.getElementById("bestilPleje").onclick = postPersonalDetails
 

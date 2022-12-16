@@ -7,29 +7,52 @@ import { getAbonnementer } from "./pages/survey/surveyProdukter/surveyProdukter.
 import { handleHttpErrors } from "./utils.js"
 import { dateRange } from "./pages/survey/surveyCyklus/surveyCyklus.js"
 
-
-const customerURL = "https://donnadonna.azurewebsites.net/api/customers/"
+const customerURL = "http://localhost:8080/api/customers"
+//const customerURL = "https://donnadonna.azurewebsites.net/api/customers/"
 const subscriptionURL = "https://donnadonna.azurewebsites.net/api/subscriptions/"
 
-let customer;
 
 export async function postPersonalDetails() {
-  customer = {
+
+const abonnement = getAbonnementer()
+
+
+  let subscription = { 
+    tamponLight: abonnement[0],
+    tamponRegular: abonnement[1],
+    tamponMax: abonnement[2],
+    sanitaryTowelLight: abonnement[3],
+    sanitaryTowelRegular: abonnement[4],
+    sanitaryTowelMax: abonnement[5],
+    sanitaryTowelNight: abonnement[6],
+    pantyLinersThin: abonnement[7],
+    pantyLinersRegular: abonnement[8],
+    pantyLinersGstring: abonnement[9],
+    deliveryInterval: frequence,
+    firstDeliveryDate: dateRange 
+} 
+
+  
+
+  let customer = {
     customerName: name,
     customerAge: age,
     customerEmail: email,
     customerAllergies: allergies,
-    //subscription: getSubscription()
-  } 
+    subscription: subscription
+  }
+
+  
 
   const options = {}
   options.method = "POST"
   options.headers = { "Content-type": "application/json" }
   options.body = JSON.stringify(customer)
-  const addedCustomer = await fetch(customerURL, options).then(handleHttpErrors)
+  const addedCustomer = await fetch(customerURL, options).then(handleHttpErrors).catch(err => console.log(err))
 }
 
-let subscription;
+
+/*let subscription;
 
 function getSubscription() {
   return subscription = {
@@ -46,6 +69,7 @@ function getSubscription() {
     deliveryInterval: frequence,
     firstDeliveryDate: dateRange
   }
+  
 }
 
 export async function postSubscription() {
@@ -70,6 +94,7 @@ export async function postSubscription() {
   options.body = JSON.stringify(subscription)
   const addedCustomer = await fetch(subscriptionURL, options).then(handleHttpErrors)
 }
+*/
 
 export function getPopover() {
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))

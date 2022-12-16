@@ -14,6 +14,7 @@ import { initSurveyFrekvens } from "./pages/survey/surveyFrekvens/surveyFrekvens
 import { initDitAbonnement } from "./pages/survey/surveyDitAbonnement/surveyDitAbonnement.js"
 
 
+
 window.addEventListener("load", async () => {
 
     const templateForside = await loadHtml("./pages/forside/forside.html")
